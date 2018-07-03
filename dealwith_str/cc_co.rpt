@@ -1,0 +1,2769 @@
+ clk (0)  PI (_PI)
+     clk       O  (1-1-3 0-0-0-0)  250-U21/I1
+                                   19-u_clk_gen/U58/I1 ...
+ PI usage:  scan_state=0  clock(off=0,master,shift)
+ rst_n (1)  PI (_PI)
+     rst_n     O  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/I
+                                   15-u_instruction_reg/U26/I ...
+ PI usage:  scan_state=0  clock(off=0,master,set,reset)
+ test_mode (2)  PI (_PI)
+     test_mode    O  (1-1-4 0-0-0-0)  250-U21/S
+                                      30-u_clk_gen/U59/S ...
+ PI usage:  constraint=1  scan_state=1
+ test_si1 (3)  PI (_PI)
+     test_si1    O  (1-1-2 0-0-0-0)  64-u_clk_gen/alu_clk_i_reg/SD
+ PI usage:  scanin(1)
+ test_si2 (4)  PI (_PI)
+     test_si2    O  (1-1-3 0-0-0-0)  132-u_accumulator/accum_reg_0_/SD
+ PI usage:  scanin(2)
+ test_se (5)  PI (_PI)
+     test_se    O  (1-1-3 0-0-0-0)  33-u_clk_gen/clk2_i_reg/SC
+                                    43-u_clk_gen/state_current_reg_5_/SC ...
+ PI usage:  scan_state=1
+ data[7] (6)  PIO (_PIO)
+     ---       B  (1-1-0 0-0-0-0)  279-
+ PI usage:  scan_state=Z
+ data[6] (7)  PIO (_PIO)
+     ---       B  (1-1-0 0-0-0-0)  276-
+ PI usage:  scan_state=Z
+ data[5] (8)  PIO (_PIO)
+     ---       B  (1-1-0 0-0-0-0)  273-
+ PI usage:  scan_state=Z
+ data[4] (9)  PIO (_PIO)
+     ---       B  (1-1-0 0-0-0-0)  270-
+ PI usage:  scan_state=Z
+ data[3] (10)  PIO (_PIO)
+     ---       B  (1-1-0 0-0-0-0)  267-
+ PI usage:  scan_state=Z
+ data[2] (11)  PIO (_PIO)
+     ---       B  (1-1-0 0-0-0-0)  264-
+ PI usage:  scan_state=Z
+ data[1] (12)  PIO (_PIO)
+     ---       B  (1-1-0 0-0-0-0)  261-
+ PI usage:  scan_state=Z
+ data[0] (13)  PIO (_PIO)
+     ---       B  (1-1-0 0-0-0-0)  258-
+ PI usage:  scan_state=Z
+ u_clk_gen/U26 (14)  INV (inv0d0)
+     I         I  (1-1-1 0-0-0-0)  1-rst_n
+     ZN        O  (1-1-1 0-0-0-0)  458-u_clk_gen/state_current_reg_6_/CDN
+                                   459-u_clk_gen/state_current_reg_5_/CDN ...
+ u_instruction_reg/U26 (15)  INV (inv0d1)
+     I         I  (1-1-1 0-0-0-0)  1-rst_n
+     ZN        O  (1-1-1 0-0-0-0)  470-u_instruction_reg/state_reg/CDN
+                                   471-u_instruction_reg/opc_iraddr_reg_15_/CDN ...
+ u_accumulator/U19 (16)  INV (inv0d0)
+     I         I  (1-1-1 0-0-0-0)  1-rst_n
+     ZN        O  (1-1-1 0-0-0-0)  487-u_accumulator/accum_reg_7_/CDN
+                                   488-u_accumulator/accum_reg_6_/CDN ...
+ u_counter/U46 (17)  INV (inv0d0)
+     I         I  (1-1-1 0-0-0-0)  1-rst_n
+     ZN        O  (1-1-1 0-0-0-0)  503-u_counter/pc_addr_reg_12_/CDN
+                                   504-u_counter/pc_addr_reg_11_/CDN ...
+ u_clk_gen/U25 (18)  INV (inv0d0)
+     I         I  (1-1-3 0-0-0-0)  0-clk
+     ZN        O  (1-1-4 0-0-0-0)  19-u_clk_gen/U58/I0
+ u_clk_gen/U58 (19)  MUX (mx02d0)
+     S         I  (1-1-4 0-0-0-0)  2-test_mode
+     I0        I  (1-1-4 0-0-0-0)  18-u_clk_gen/U25/ZN
+     I1        I  (1-1-3 0-0-0-0)  0-clk
+     Z         O  (2-2-3 0-0-0-0)  470-u_instruction_reg/state_reg/CP
+                                   471-u_instruction_reg/opc_iraddr_reg_15_/CP ...
+ u_clk_gen/U20 (20)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  458-u_clk_gen/state_current_reg_6_/Q
+     ZN        O  (1-1-2 0-0-0-0)  58-u_clk_gen/state_current_reg_7_/SD
+                                   52-u_clk_gen/U21/A3
+ u_clk_gen/U28 (21)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  459-u_clk_gen/state_current_reg_5_/Q
+     ZN        O  (1-1-2 0-0-0-0)  45-u_clk_gen/state_current_reg_6_/SD
+                                   38-u_clk_gen/U29/A3
+ u_clk_gen/U5 (22)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  460-u_clk_gen/state_current_reg_1_/Q
+     ZN        O  (1-1-9 0-0-0-0)  28-u_clk_gen/U7/A1
+                                   41-u_clk_gen/U16/A2
+ u_clk_gen/U14 (23)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  461-u_clk_gen/state_current_reg_2_/Q
+     ZN        O  (1-1-2 0-0-0-0)  56-u_clk_gen/state_current_reg_3_/SD
+                                   51-u_clk_gen/U17/A3
+ u_clk_gen/U33 (24)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  462-u_clk_gen/state_current_reg_3_/Q
+     ZN        O  (1-1-2 0-0-0-0)  60-u_clk_gen/state_current_reg_4_/SD
+                                   53-u_clk_gen/U34/A3
+ u_clk_gen/U18 (25)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  463-u_clk_gen/state_current_reg_4_/Q
+     ZN        O  (1-1-2 0-0-0-0)  43-u_clk_gen/state_current_reg_5_/SD
+                                   37-u_clk_gen/U19/A3
+ u_clk_gen/U6 (26)  NOR (nr04d0)
+     A4        I  (1-1-0 0-0-0-0)  462-u_clk_gen/state_current_reg_3_/Q
+     A3        I  (1-1-0 0-0-0-0)  458-u_clk_gen/state_current_reg_6_/Q
+     A2        I  (1-1-0 0-0-0-0)  464-u_clk_gen/state_current_reg_7_/Q
+     A1        I  (1-1-0 0-0-0-0)  461-u_clk_gen/state_current_reg_2_/Q
+     ZN        O  (1-4-6 0-0-0-0)  40-u_clk_gen/U10/A2
+                                   28-u_clk_gen/U7/A2
+ u_clk_gen/U15 (27)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  464-u_clk_gen/state_current_reg_7_/Q
+     ZN        O  (1-1-2 0-0-0-0)  77-u_clk_gen/clk4_i_reg/SD
+                                   41-u_clk_gen/U16/A3
+ u_clk_gen/U7 (28)  NAND (nd02d0)
+     A2        I  (1-4-6 0-0-0-0)  26-u_clk_gen/U6/ZN
+     A1        I  (1-1-9 0-0-0-0)  22-u_clk_gen/U5/ZN
+     ZN        O  (5-1-5 0-0-0-0)  37-u_clk_gen/U19/A4
+                                   38-u_clk_gen/U29/A4 ...
+ u_clk_gen/U30 (29)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     ZN        O  (1-1-2 0-0-0-0)  67-u_clk_gen/state_current_reg_0_/SD
+                                   70-u_clk_gen/U32/I1
+ u_clk_gen/U59 (30)  MUX (mx02d0)
+     S         I  (1-1-4 0-0-0-0)  2-test_mode
+     I0        I  (1-1-0 0-0-0-0)  466-u_clk_gen/alu_clk_i_reg/Q
+     I1        I  (1-1-3 0-0-0-0)  0-clk
+     Z         O  (2-2-3 0-0-0-0)  495-u_alu/alu_out_reg_0_/CP
+                                   496-u_alu/alu_out_reg_2_/CP ...
+ u_clk_gen/U27 (31)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  467-u_clk_gen/clk2_i_reg/Q
+     ZN        O  (1-1-2 0-0-0-0)  33-u_clk_gen/clk2_i_reg/D
+                                   71-u_clk_gen/fetch_reg/SD
+ u_clk_gen/clk2_i_reg (32)  BUF (sdcfq1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  467-
+ u_clk_gen/clk2_i_reg (33)  MUX (sdcfq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-1-2 0-0-0-0)  31-u_clk_gen/U27/ZN
+     SD        I  (1-1-0 0-0-0-0)  466-u_clk_gen/alu_clk_i_reg/Q
+     ---       O  (2-2-1 0-0-0-0)  467-
+ u_clk_gen/state_current_reg_0_ (34)  BUF (sdpfb1)
+     ---       I  (1-1-0 0-0-0-0)  468-
+     Q         O  (1-1-9 0-0-0-0)  37-u_clk_gen/U19/A2
+                                   38-u_clk_gen/U29/A2 ...
+ u_clk_gen/state_current_reg_0_ (35)  INV (sdpfb1)
+     ---       I  (1-1-0 0-0-0-0)  468-
+     QN        O  (1-1-2 0-0-0-0)  47-u_clk_gen/state_current_reg_1_/SD
+                                   39-u_clk_gen/U8/A3
+ u_clk_gen/U9 (36)  NOR (nr03d0)
+     A3        I  (1-1-0 0-0-0-0)  459-u_clk_gen/state_current_reg_5_/Q
+     A2        I  (1-1-9 0-0-0-0)  34-u_clk_gen/state_current_reg_0_/Q
+     A1        I  (1-1-0 0-0-0-0)  463-u_clk_gen/state_current_reg_4_/Q
+     ZN        O  (1-3-7 0-0-0-0)  40-u_clk_gen/U10/A3
+                                   41-u_clk_gen/U16/A1
+ u_clk_gen/U19 (37)  NOR (nr04d0)
+     A4        I  (5-1-5 0-0-0-0)  28-u_clk_gen/U7/ZN
+     A3        I  (1-1-2 0-0-0-0)  25-u_clk_gen/U18/ZN
+     A2        I  (1-1-9 0-0-0-0)  34-u_clk_gen/state_current_reg_0_/Q
+     A1        I  (1-1-0 0-0-0-0)  459-u_clk_gen/state_current_reg_5_/Q
+     ZN        O  (1-8-2 0-0-0-0)  43-u_clk_gen/state_current_reg_5_/D
+                                   61-u_clk_gen/U22/A2
+ u_clk_gen/U29 (38)  NOR (nr04d0)
+     A4        I  (5-1-5 0-0-0-0)  28-u_clk_gen/U7/ZN
+     A3        I  (1-1-2 0-0-0-0)  21-u_clk_gen/U28/ZN
+     A2        I  (1-1-9 0-0-0-0)  34-u_clk_gen/state_current_reg_0_/Q
+     A1        I  (1-1-0 0-0-0-0)  463-u_clk_gen/state_current_reg_4_/Q
+     ZN        O  (1-8-2 0-0-0-0)  45-u_clk_gen/state_current_reg_6_/D
+                                   66-u_clk_gen/U35/A1 ...
+ u_clk_gen/U8 (39)  NOR (nr04d0)
+     A4        I  (5-1-5 0-0-0-0)  28-u_clk_gen/U7/ZN
+     A3        I  (1-1-2 0-0-0-0)  35-u_clk_gen/state_current_reg_0_/QN
+     A2        I  (1-1-0 0-0-0-0)  459-u_clk_gen/state_current_reg_5_/Q
+     A1        I  (1-1-0 0-0-0-0)  463-u_clk_gen/state_current_reg_4_/Q
+     ZN        O  (1-8-2 0-0-0-0)  47-u_clk_gen/state_current_reg_1_/D
+                                   48-u_clk_gen/U11/A1
+ u_clk_gen/U10 (40)  AND (an03d0)
+     A3        I  (1-3-7 0-0-0-0)  36-u_clk_gen/U9/ZN
+     A2        I  (1-4-6 0-0-0-0)  26-u_clk_gen/U6/ZN
+     A1        I  (1-1-0 0-0-0-0)  460-u_clk_gen/state_current_reg_1_/Q
+     Z         O  (1-8-2 0-0-0-0)  50-u_clk_gen/state_current_reg_2_/D
+                                   48-u_clk_gen/U11/A2 ...
+ u_clk_gen/U16 (41)  NAND (nd03d0)
+     A3        I  (1-1-2 0-0-0-0)  27-u_clk_gen/U15/ZN
+     A2        I  (1-1-9 0-0-0-0)  22-u_clk_gen/U5/ZN
+     A1        I  (1-3-7 0-0-0-0)  36-u_clk_gen/U9/ZN
+     ZN        O  (5-1-5 0-0-0-0)  51-u_clk_gen/U17/A4
+                                   52-u_clk_gen/U21/A4 ...
+ u_clk_gen/state_current_reg_5_ (42)  BUF (sdcfq1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  459-
+ u_clk_gen/state_current_reg_5_ (43)  MUX (sdcfq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-8-2 0-0-0-0)  37-u_clk_gen/U19/ZN
+     SD        I  (1-1-2 0-0-0-0)  25-u_clk_gen/U18/ZN
+     ---       O  (2-2-1 0-0-0-0)  459-
+ u_clk_gen/state_current_reg_6_ (44)  BUF (sdcfq1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  458-
+ u_clk_gen/state_current_reg_6_ (45)  MUX (sdcfq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-8-2 0-0-0-0)  38-u_clk_gen/U29/ZN
+     SD        I  (1-1-2 0-0-0-0)  21-u_clk_gen/U28/ZN
+     ---       O  (2-2-1 0-0-0-0)  458-
+ u_clk_gen/state_current_reg_1_ (46)  BUF (sdcfq1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  460-
+ u_clk_gen/state_current_reg_1_ (47)  MUX (sdcfq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-8-2 0-0-0-0)  39-u_clk_gen/U8/ZN
+     SD        I  (1-1-2 0-0-0-0)  35-u_clk_gen/state_current_reg_0_/QN
+     ---       O  (2-2-1 0-0-0-0)  460-
+ u_clk_gen/U11 (48)  NOR (nr02d0)
+     A2        I  (1-8-2 0-0-0-0)  40-u_clk_gen/U10/Z
+     A1        I  (1-8-2 0-0-0-0)  39-u_clk_gen/U8/ZN
+     ZN        O  (8-2-3 0-0-0-0)  63-u_clk_gen/U13/I1
+                                   54-u_clk_gen/U12/I
+ u_clk_gen/state_current_reg_2_ (49)  BUF (sdcfq1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  461-
+ u_clk_gen/state_current_reg_2_ (50)  MUX (sdcfq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-8-2 0-0-0-0)  40-u_clk_gen/U10/Z
+     SD        I  (1-1-0 0-0-0-0)  460-u_clk_gen/state_current_reg_1_/Q
+     ---       O  (2-2-1 0-0-0-0)  461-
+ u_clk_gen/U17 (51)  NOR (nr04d0)
+     A4        I  (5-1-5 0-0-0-0)  41-u_clk_gen/U16/ZN
+     A3        I  (1-1-2 0-0-0-0)  23-u_clk_gen/U14/ZN
+     A2        I  (1-1-0 0-0-0-0)  458-u_clk_gen/state_current_reg_6_/Q
+     A1        I  (1-1-0 0-0-0-0)  462-u_clk_gen/state_current_reg_3_/Q
+     ZN        O  (1-8-2 0-0-0-0)  56-u_clk_gen/state_current_reg_3_/D
+                                   61-u_clk_gen/U22/A1
+ u_clk_gen/U21 (52)  NOR (nr04d0)
+     A4        I  (5-1-5 0-0-0-0)  41-u_clk_gen/U16/ZN
+     A3        I  (1-1-2 0-0-0-0)  20-u_clk_gen/U20/ZN
+     A2        I  (1-1-0 0-0-0-0)  462-u_clk_gen/state_current_reg_3_/Q
+     A1        I  (1-1-0 0-0-0-0)  461-u_clk_gen/state_current_reg_2_/Q
+     ZN        O  (1-8-2 0-0-0-0)  58-u_clk_gen/state_current_reg_7_/D
+                                   61-u_clk_gen/U22/A3
+ u_clk_gen/U34 (53)  NOR (nr04d0)
+     A4        I  (5-1-5 0-0-0-0)  41-u_clk_gen/U16/ZN
+     A3        I  (1-1-2 0-0-0-0)  24-u_clk_gen/U33/ZN
+     A2        I  (1-1-0 0-0-0-0)  458-u_clk_gen/state_current_reg_6_/Q
+     A1        I  (1-1-0 0-0-0-0)  461-u_clk_gen/state_current_reg_2_/Q
+     ZN        O  (1-8-2 0-0-0-0)  60-u_clk_gen/state_current_reg_4_/D
+                                   66-u_clk_gen/U35/A2
+ u_clk_gen/U12 (54)  INV (inv0d0)
+     I         I  (8-2-3 0-0-0-0)  48-u_clk_gen/U11/ZN
+     ZN        O  (2-8-3 0-0-0-0)  63-u_clk_gen/U13/I0
+                                   61-u_clk_gen/U22/A4
+ u_clk_gen/state_current_reg_3_ (55)  BUF (sdcfq1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  462-
+ u_clk_gen/state_current_reg_3_ (56)  MUX (sdcfq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-8-2 0-0-0-0)  51-u_clk_gen/U17/ZN
+     SD        I  (1-1-2 0-0-0-0)  23-u_clk_gen/U14/ZN
+     ---       O  (2-2-1 0-0-0-0)  462-
+ u_clk_gen/state_current_reg_7_ (57)  BUF (sdcfq1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  464-
+ u_clk_gen/state_current_reg_7_ (58)  MUX (sdcfq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-8-2 0-0-0-0)  52-u_clk_gen/U21/ZN
+     SD        I  (1-1-2 0-0-0-0)  20-u_clk_gen/U20/ZN
+     ---       O  (2-2-1 0-0-0-0)  464-
+ u_clk_gen/state_current_reg_4_ (59)  BUF (sdcfq1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  463-
+ u_clk_gen/state_current_reg_4_ (60)  MUX (sdcfq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-8-2 0-0-0-0)  53-u_clk_gen/U34/ZN
+     SD        I  (1-1-2 0-0-0-0)  24-u_clk_gen/U33/ZN
+     ---       O  (2-2-1 0-0-0-0)  463-
+ u_clk_gen/U22 (61)  OR (or04d0)
+     A4        I  (2-8-3 0-0-0-0)  54-u_clk_gen/U12/ZN
+     A3        I  (1-8-2 0-0-0-0)  52-u_clk_gen/U21/ZN
+     A2        I  (1-8-2 0-0-0-0)  37-u_clk_gen/U19/ZN
+     A1        I  (1-8-2 0-0-0-0)  51-u_clk_gen/U17/ZN
+     Z         O  (5-8-4 0-0-0-0)  66-u_clk_gen/U35/A3
+                                   69-u_clk_gen/U31/A2 ...
+ u_clk_gen/alu_clk_i_reg (62)  BUF (sdcfq1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  466-
+ u_clk_gen/U13 (63)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  466-u_clk_gen/alu_clk_i_reg/Q
+     I0        I  (2-8-3 0-0-0-0)  54-u_clk_gen/U12/ZN
+     I1        I  (8-2-3 0-0-0-0)  48-u_clk_gen/U11/ZN
+     Z         O  (3-3-2 0-0-0-0)  64-u_clk_gen/alu_clk_i_reg/D
+ u_clk_gen/alu_clk_i_reg (64)  MUX (sdcfq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (3-3-2 0-0-0-0)  63-u_clk_gen/U13/Z
+     SD        I  (1-1-2 0-0-0-0)  3-test_si1
+     ---       O  (2-2-1 0-0-0-0)  466-
+ u_clk_gen/state_current_reg_0_ (65)  BUF (sdpfb1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  468-
+ u_clk_gen/U35 (66)  NOR (nr03d0)
+     A3        I  (5-8-4 0-0-0-0)  61-u_clk_gen/U22/Z
+     A2        I  (1-8-2 0-0-0-0)  53-u_clk_gen/U34/ZN
+     A1        I  (1-8-2 0-0-0-0)  38-u_clk_gen/U29/ZN
+     ZN        O  (8-7-2 0-0-0-0)  67-u_clk_gen/state_current_reg_0_/D
+ u_clk_gen/state_current_reg_0_ (67)  MUX (sdpfb1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (8-7-2 0-0-0-0)  66-u_clk_gen/U35/ZN
+     SD        I  (1-1-2 0-0-0-0)  29-u_clk_gen/U30/ZN
+     ---       O  (2-2-1 0-0-0-0)  468-
+ u_clk_gen/fetch_reg (68)  BUF (sdcfq1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  465-
+ u_clk_gen/U31 (69)  NOR (nr02d0)
+     A2        I  (5-8-4 0-0-0-0)  61-u_clk_gen/U22/Z
+     A1        I  (1-8-2 0-0-0-0)  38-u_clk_gen/U29/ZN
+     ZN        O  (8-6-4 0-0-0-0)  70-u_clk_gen/U32/S
+ u_clk_gen/U32 (70)  MUX (mx02d0)
+     S         I  (8-6-4 0-0-0-0)  69-u_clk_gen/U31/ZN
+     I0        I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I1        I  (1-1-2 0-0-0-0)  29-u_clk_gen/U30/ZN
+     Z         O  (7-7-2 0-0-0-0)  71-u_clk_gen/fetch_reg/D
+ u_clk_gen/fetch_reg (71)  MUX (sdcfq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (7-7-2 0-0-0-0)  70-u_clk_gen/U32/Z
+     SD        I  (1-1-2 0-0-0-0)  31-u_clk_gen/U27/ZN
+     ---       O  (2-2-1 0-0-0-0)  465-
+ u_clk_gen/clk4_i_reg (72)  BUF (sdpfb1)
+     ---       I  (1-1-0 0-0-0-0)  469-
+     Q         O  (1-1-0 0-0-0-0)  546-clk4
+                                   76-u_clk_gen/U24/I0
+ u_clk_gen/clk4_i_reg (73)  BUF (sdpfb1)
+     CPN       I  (1-1-3 0-0-0-0)  0-clk
+     ---       O  (1-1-3 0-0-0-0)  469-
+ u_clk_gen/U23 (74)  OR (nd12d0)
+    !A2        I  (5-8-4 0-0-0-0)  61-u_clk_gen/U22/Z
+     A1        I  (1-8-2 0-0-0-0)  40-u_clk_gen/U10/Z
+     ZN        O  (9-5-4 0-0-0-0)  76-u_clk_gen/U24/S
+ u_clk_gen/clk4_i_reg (75)  INV (sdpfb1)
+     ---       I  (1-1-0 0-0-0-0)  469-
+     QN        O  (1-1-7 0-0-0-0)  76-u_clk_gen/U24/I1
+ u_clk_gen/U24 (76)  MUX (mx02d0)
+     S         I  (9-5-4 0-0-0-0)  74-u_clk_gen/U23/ZN
+     I0        I  (1-1-0 0-0-0-0)  72-u_clk_gen/clk4_i_reg/Q
+     I1        I  (1-1-7 0-0-0-0)  75-u_clk_gen/clk4_i_reg/QN
+     Z         O  (6-6-2 0-0-0-0)  77-u_clk_gen/clk4_i_reg/D
+ u_clk_gen/clk4_i_reg (77)  MUX (sdpfb1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (6-6-2 0-0-0-0)  76-u_clk_gen/U24/Z
+     SD        I  (1-1-2 0-0-0-0)  27-u_clk_gen/U15/ZN
+     ---       O  (2-2-1 0-0-0-0)  469-
+ u_alu/U21 (78)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  477-u_instruction_reg/opc_iraddr_reg_14_/Q
+     ZN        O  (1-1-8 0-0-0-0)  82-u_alu/U15/A1
+                                   86-u_alu/U43/A1
+ u_alu/U50 (79)  OR (nd12d0)
+    !A2        I  (1-1-0 0-0-0-0)  477-u_instruction_reg/opc_iraddr_reg_14_/Q
+     A1        I  (1-1-0 0-0-0-0)  471-u_instruction_reg/opc_iraddr_reg_15_/Q
+     ZN        O  (2-1-9 0-0-0-0)  84-u_alu/U17/A1
+                                   348-u_alu/U95/A1
+ u_machine/U4 (80)  AND (an02d0)
+     A2        I  (1-1-0 0-0-0-0)  477-u_instruction_reg/opc_iraddr_reg_14_/Q
+     A1        I  (1-1-0 0-0-0-0)  471-u_instruction_reg/opc_iraddr_reg_15_/Q
+     Z         O  (1-2-9 0-0-0-0)  182-u_machine/U35/A2
+                                   179-u_machine/U42/B2 ...
+ u_machine/U29 (81)  NOR (nr02d0)
+     A2        I  (1-1-0 0-0-0-0)  477-u_instruction_reg/opc_iraddr_reg_14_/Q
+     A1        I  (1-1-0 0-0-0-0)  471-u_instruction_reg/opc_iraddr_reg_15_/Q
+     ZN        O  (1-2-9 0-0-0-0)  173-u_machine/U39/A1
+                                   193-u_machine/U36/A2 ...
+ u_alu/U15 (82)  NAND (nd02d0)
+     A2        I  (1-1-0 0-0-0-0)  471-u_instruction_reg/opc_iraddr_reg_15_/Q
+     A1        I  (1-1-8 0-0-0-0)  78-u_alu/U21/ZN
+     ZN        O  (2-1-7 0-0-0-0)  365-u_alu/U66/A2
+                                   85-u_alu/U19/I ...
+ u_machine/U30 (83)  NOR (nr02d0)
+     A2        I  (1-2-9 0-0-0-0)  81-u_machine/U29/ZN
+     A1        I  (1-2-9 0-0-0-0)  80-u_machine/U4/Z
+     ZN        O  (2-2-8 0-0-0-0)  155-u_machine/U11/A2
+                                   199-u_machine/U45/C1
+ u_alu/U17 (84)  NAND (nd02d0)
+     A2        I  (2-1-7 0-0-0-0)  82-u_alu/U15/ZN
+     A1        I  (2-1-9 0-0-0-0)  79-u_alu/U50/ZN
+     ZN        O  (2-2-8 0-0-0-0)  369-u_alu/U31/A2
+                                   384-u_alu/U32/A2 ...
+ u_alu/U19 (85)  INV (inv0d0)
+     I         I  (2-1-7 0-0-0-0)  82-u_alu/U15/ZN
+     ZN        O  (1-2-7 0-0-0-0)  381-u_alu/U33/A2
+                                   396-u_alu/U30/A2 ...
+ u_alu/U43 (86)  NOR (nr03d0)
+     A3        I  (1-1-0 0-0-0-0)  471-u_instruction_reg/opc_iraddr_reg_15_/Q
+     A2        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     A1        I  (1-1-8 0-0-0-0)  78-u_alu/U21/ZN
+     ZN        O  (1-3-8 0-0-0-0)  357-u_alu/U16/A2
+                                   376-u_alu/U14/A2 ...
+ u_alu/U46 (87)  NOR (nr02d0)
+     A2        I  (2-1-7 0-0-0-0)  82-u_alu/U15/ZN
+     A1        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     ZN        O  (1-3-9 0-0-0-0)  366-u_alu/U68/A1
+                                   380-u_alu/U74/A1 ...
+ u_alu/U20 (88)  INV (inv0d0)
+     I         I  (1-3-8 0-0-0-0)  86-u_alu/U43/ZN
+     ZN        O  (3-1-8 0-0-0-0)  313-u_alu/U64/A1
+                                   342-u_alu/U65/A2 ...
+ u_alu/U10 (89)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  487-u_accumulator/accum_reg_7_/Q
+     ZN        O  (1-1-9 0-0-0-0)  448-u_alu/U92/A1
+                                   447-u_alu/U90/C1 ...
+ u_alu/U9 (90)  BUF (cg01d0)
+     A         I  (1-1-0 0-0-0-0)  488-u_accumulator/accum_reg_6_/Q
+     ---       O  (1-1-19 0-0-0-0)  432-
+                                   434-
+ u_alu/U3 (91)  BUF (cg01d0)
+     A         I  (1-1-0 0-0-0-0)  489-u_accumulator/accum_reg_5_/Q
+     ---       O  (1-1-14 0-0-0-0)  417-
+                                   419-
+ u_alu/U4 (92)  BUF (cg01d0)
+     A         I  (1-1-0 0-0-0-0)  490-u_accumulator/accum_reg_4_/Q
+     ---       O  (1-1-14 0-0-0-0)  402-
+                                   404-
+ u_alu/U5 (93)  BUF (cg01d0)
+     A         I  (1-1-0 0-0-0-0)  491-u_accumulator/accum_reg_3_/Q
+     ---       O  (1-1-14 0-0-0-0)  387-
+                                   389-
+ u_alu/U6 (94)  BUF (cg01d0)
+     A         I  (1-1-0 0-0-0-0)  492-u_accumulator/accum_reg_2_/Q
+     ---       O  (1-1-14 0-0-0-0)  372-
+                                   374-
+ u_alu/U7 (95)  BUF (cg01d0)
+     A         I  (1-1-0 0-0-0-0)  493-u_accumulator/accum_reg_1_/Q
+     ---       O  (1-1-13 0-0-0-0)  353-
+                                   354-
+ u_alu/U34 (96)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  494-u_accumulator/accum_reg_0_/Q
+     ZN        O  (1-1-9 0-0-0-0)  351-u_alu/U96/A2
+                                   97-u_alu/U94/B
+ u_alu/U94 (97)  BUF (ora211d1)
+     B         I  (1-1-9 0-0-0-0)  96-u_alu/U34/ZN
+     ---       O  (1-1-11 0-0-0-0)  344-
+                                   345-
+ u_addr/U7 (98)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  478-u_instruction_reg/opc_iraddr_reg_12_/Q
+     I1        I  (1-1-0 0-0-0-0)  503-u_counter/pc_addr_reg_12_/Q
+     Z         O  (2-2-0 0-0-0-0)  532-addr[12]
+ u_addr/U8 (99)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  479-u_instruction_reg/opc_iraddr_reg_11_/Q
+     I1        I  (1-1-0 0-0-0-0)  504-u_counter/pc_addr_reg_11_/Q
+     Z         O  (2-2-0 0-0-0-0)  533-addr[11]
+ u_counter/U22 (100)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  505-u_counter/pc_addr_reg_10_/Q
+     ZN        O  (1-1-14 0-0-0-0)  243-u_counter/U42/I0
+                                   125-u_counter/U23/A2
+ u_addr/U13 (101)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  480-u_instruction_reg/opc_iraddr_reg_10_/Q
+     I1        I  (1-1-0 0-0-0-0)  505-u_counter/pc_addr_reg_10_/Q
+     Z         O  (2-2-0 0-0-0-0)  534-addr[10]
+ u_addr/U10 (102)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  475-u_instruction_reg/opc_iraddr_reg_9_/Q
+     I1        I  (1-1-0 0-0-0-0)  506-u_counter/pc_addr_reg_9_/Q
+     Z         O  (2-2-0 0-0-0-0)  535-addr[9]
+ u_counter/U19 (103)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  507-u_counter/pc_addr_reg_8_/Q
+     ZN        O  (1-1-12 0-0-0-0)  240-u_counter/U40/I0
+                                   123-u_counter/U20/A2
+ u_addr/U6 (104)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  473-u_instruction_reg/opc_iraddr_reg_8_/Q
+     I1        I  (1-1-0 0-0-0-0)  507-u_counter/pc_addr_reg_8_/Q
+     Z         O  (2-2-0 0-0-0-0)  536-addr[8]
+ u_addr/U12 (105)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  472-u_instruction_reg/opc_iraddr_reg_7_/Q
+     I1        I  (1-1-0 0-0-0-0)  508-u_counter/pc_addr_reg_7_/Q
+     Z         O  (2-2-0 0-0-0-0)  537-addr[7]
+ u_counter/U16 (106)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  509-u_counter/pc_addr_reg_6_/Q
+     ZN        O  (1-1-10 0-0-0-0)  246-u_counter/U44/I0
+                                   121-u_counter/U17/A2
+ u_addr/U11 (107)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  482-u_instruction_reg/opc_iraddr_reg_6_/Q
+     I1        I  (1-1-0 0-0-0-0)  509-u_counter/pc_addr_reg_6_/Q
+     Z         O  (2-2-0 0-0-0-0)  538-addr[6]
+ u_addr/U2 (108)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  483-u_instruction_reg/opc_iraddr_reg_5_/Q
+     I1        I  (1-1-0 0-0-0-0)  510-u_counter/pc_addr_reg_5_/Q
+     Z         O  (2-2-0 0-0-0-0)  539-addr[5]
+ u_counter/U13 (109)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  511-u_counter/pc_addr_reg_4_/Q
+     ZN        O  (1-1-8 0-0-0-0)  225-u_counter/U32/I0
+                                   119-u_counter/U14/A2
+ u_addr/U1 (110)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  484-u_instruction_reg/opc_iraddr_reg_4_/Q
+     I1        I  (1-1-0 0-0-0-0)  511-u_counter/pc_addr_reg_4_/Q
+     Z         O  (2-2-0 0-0-0-0)  540-addr[4]
+ u_addr/U3 (111)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  485-u_instruction_reg/opc_iraddr_reg_3_/Q
+     I1        I  (1-1-0 0-0-0-0)  512-u_counter/pc_addr_reg_3_/Q
+     Z         O  (2-2-0 0-0-0-0)  541-addr[3]
+ u_counter/U8 (112)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  513-u_counter/pc_addr_reg_2_/Q
+     ZN        O  (1-1-6 0-0-0-0)  210-u_counter/U9/I0
+                                   117-u_counter/U11/A2
+ u_addr/U9 (113)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  486-u_instruction_reg/opc_iraddr_reg_2_/Q
+     I1        I  (1-1-0 0-0-0-0)  513-u_counter/pc_addr_reg_2_/Q
+     Z         O  (2-2-0 0-0-0-0)  542-addr[2]
+ u_addr/U5 (114)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  476-u_instruction_reg/opc_iraddr_reg_1_/Q
+     I1        I  (1-1-0 0-0-0-0)  514-u_counter/pc_addr_reg_1_/Q
+     Z         O  (2-2-0 0-0-0-0)  543-addr[1]
+ u_counter/U5 (115)  NAND (nd02d0)
+     A2        I  (1-1-0 0-0-0-0)  515-u_counter/pc_addr_reg_0_/Q
+     A1        I  (1-1-0 0-0-0-0)  514-u_counter/pc_addr_reg_1_/Q
+     ZN        O  (2-1-5 0-0-0-0)  207-u_counter/U6/A
+                                   210-u_counter/U9/S ...
+ u_addr/U4 (116)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I0        I  (1-1-0 0-0-0-0)  474-u_instruction_reg/opc_iraddr_reg_0_/Q
+     I1        I  (1-1-0 0-0-0-0)  515-u_counter/pc_addr_reg_0_/Q
+     Z         O  (2-2-0 0-0-0-0)  544-addr[0]
+ u_counter/U11 (117)  NOR (nr02d0)
+     A2        I  (1-1-6 0-0-0-0)  112-u_counter/U8/ZN
+     A1        I  (2-1-5 0-0-0-0)  115-u_counter/U5/ZN
+     ZN        O  (1-3-6 0-0-0-0)  118-u_counter/U12/A1
+                                   236-u_counter/U38/B1
+ u_counter/U12 (118)  NAND (nd02d0)
+     A2        I  (1-1-0 0-0-0-0)  512-u_counter/pc_addr_reg_3_/Q
+     A1        I  (1-3-6 0-0-0-0)  117-u_counter/U11/ZN
+     ZN        O  (4-1-5 0-0-0-0)  225-u_counter/U32/S
+                                   237-u_counter/U38/A ...
+ u_counter/U14 (119)  NOR (nr02d0)
+     A2        I  (1-1-8 0-0-0-0)  109-u_counter/U13/ZN
+     A1        I  (4-1-5 0-0-0-0)  118-u_counter/U12/ZN
+     ZN        O  (1-5-6 0-0-0-0)  120-u_counter/U15/A1
+                                   232-u_counter/U36/B1
+ u_counter/U15 (120)  NAND (nd02d0)
+     A2        I  (1-1-0 0-0-0-0)  510-u_counter/pc_addr_reg_5_/Q
+     A1        I  (1-5-6 0-0-0-0)  119-u_counter/U14/ZN
+     ZN        O  (6-1-5 0-0-0-0)  233-u_counter/U36/A
+                                   246-u_counter/U44/S ...
+ u_counter/U17 (121)  NOR (nr02d0)
+     A2        I  (1-1-10 0-0-0-0)  106-u_counter/U16/ZN
+     A1        I  (6-1-5 0-0-0-0)  120-u_counter/U15/ZN
+     ZN        O  (1-7-6 0-0-0-0)  122-u_counter/U18/A1
+                                   228-u_counter/U34/B1
+ u_counter/U18 (122)  NAND (nd02d0)
+     A2        I  (1-1-0 0-0-0-0)  508-u_counter/pc_addr_reg_7_/Q
+     A1        I  (1-7-6 0-0-0-0)  121-u_counter/U17/ZN
+     ZN        O  (8-1-5 0-0-0-0)  229-u_counter/U34/A
+                                   240-u_counter/U40/S ...
+ u_counter/U20 (123)  NOR (nr02d0)
+     A2        I  (1-1-12 0-0-0-0)  103-u_counter/U19/ZN
+     A1        I  (8-1-5 0-0-0-0)  122-u_counter/U18/ZN
+     ZN        O  (1-9-6 0-0-0-0)  124-u_counter/U21/A1
+                                   217-u_counter/U27/B1
+ u_counter/U21 (124)  NAND (nd02d0)
+     A2        I  (1-1-0 0-0-0-0)  506-u_counter/pc_addr_reg_9_/Q
+     A1        I  (1-9-6 0-0-0-0)  123-u_counter/U20/ZN
+     ZN        O  (10-1-5 0-0-0-0)  218-u_counter/U27/A
+                                   243-u_counter/U42/S ...
+ u_counter/U23 (125)  NOR (nr02d0)
+     A2        I  (1-1-14 0-0-0-0)  100-u_counter/U22/ZN
+     A1        I  (10-1-5 0-0-0-0)  124-u_counter/U21/ZN
+     ZN        O  (1-11-6 0-0-0-0)  126-u_counter/U24/A1
+                                    213-u_counter/U25/B1
+ u_counter/U24 (126)  NAND (nd02d0)
+     A2        I  (1-1-0 0-0-0-0)  504-u_counter/pc_addr_reg_11_/Q
+     A1        I  (1-11-6 0-0-0-0)  125-u_counter/U23/ZN
+     ZN        O  (12-1-5 0-0-0-0)  214-u_counter/U25/A
+                                    222-u_counter/U30/S
+ u_machine/U26 (127)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  516-u_machine/ena_reg/Q
+     ZN        O  (1-1-5 0-0-0-0)  128-u_machine/U27/A3
+                                   160-u_machine/U43/A ...
+ u_machine/U27 (128)  NOR (nr03d0)
+     A3        I  (1-1-5 0-0-0-0)  127-u_machine/U26/ZN
+     A2        I  (1-1-0 0-0-0-0)  518-u_machine/state_reg_3_/Q
+     A1        I  (1-1-0 0-0-0-0)  517-u_machine/state_reg_0_/Q
+     ZN        O  (1-3-3 0-0-0-0)  280-u_machine/state_reg_0_/D
+                                   196-u_machine/U38/B1 ...
+ u_machine/U32 (129)  BUF (aor211d1)
+     A         I  (1-1-0 0-0-0-0)  518-u_machine/state_reg_3_/Q
+     ---       O  (1-1-7 0-0-0-0)  165-
+                                   166-
+ u_accumulator/U3 (130)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  519-u_machine/load_acc_reg/Q
+     ZN        O  (1-1-5 0-0-0-0)  131-u_accumulator/U4/S
+                                   133-u_accumulator/U6/S ...
+ u_accumulator/U4 (131)  MUX (mx02d0)
+     S         I  (1-1-5 0-0-0-0)  130-u_accumulator/U3/ZN
+     I0        I  (1-1-0 0-0-0-0)  495-u_alu/alu_out_reg_0_/Q
+     I1        I  (1-1-0 0-0-0-0)  494-u_accumulator/accum_reg_0_/Q
+     Z         O  (2-2-3 0-0-0-0)  132-u_accumulator/accum_reg_0_/D
+ u_accumulator/accum_reg_0_ (132)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  131-u_accumulator/U4/Z
+     SD        I  (1-1-3 0-0-0-0)  4-test_si2
+     ---       O  (2-2-2 0-0-0-0)  494-
+ u_accumulator/U6 (133)  MUX (mx02d0)
+     S         I  (1-1-5 0-0-0-0)  130-u_accumulator/U3/ZN
+     I0        I  (1-1-0 0-0-0-0)  497-u_alu/alu_out_reg_1_/Q
+     I1        I  (1-1-0 0-0-0-0)  493-u_accumulator/accum_reg_1_/Q
+     Z         O  (2-2-3 0-0-0-0)  134-u_accumulator/accum_reg_1_/D
+ u_accumulator/accum_reg_1_ (134)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  133-u_accumulator/U6/Z
+     SD        I  (1-1-0 0-0-0-0)  494-u_accumulator/accum_reg_0_/Q
+     ---       O  (2-2-2 0-0-0-0)  493-
+ u_accumulator/U8 (135)  MUX (mx02d0)
+     S         I  (1-1-5 0-0-0-0)  130-u_accumulator/U3/ZN
+     I0        I  (1-1-0 0-0-0-0)  496-u_alu/alu_out_reg_2_/Q
+     I1        I  (1-1-0 0-0-0-0)  492-u_accumulator/accum_reg_2_/Q
+     Z         O  (2-2-3 0-0-0-0)  136-u_accumulator/accum_reg_2_/D
+ u_accumulator/accum_reg_2_ (136)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  135-u_accumulator/U8/Z
+     SD        I  (1-1-0 0-0-0-0)  493-u_accumulator/accum_reg_1_/Q
+     ---       O  (2-2-2 0-0-0-0)  492-
+ u_accumulator/U10 (137)  MUX (mx02d0)
+     S         I  (1-1-5 0-0-0-0)  130-u_accumulator/U3/ZN
+     I0        I  (1-1-0 0-0-0-0)  498-u_alu/alu_out_reg_3_/Q
+     I1        I  (1-1-0 0-0-0-0)  491-u_accumulator/accum_reg_3_/Q
+     Z         O  (2-2-3 0-0-0-0)  138-u_accumulator/accum_reg_3_/D
+ u_accumulator/accum_reg_3_ (138)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  137-u_accumulator/U10/Z
+     SD        I  (1-1-0 0-0-0-0)  492-u_accumulator/accum_reg_2_/Q
+     ---       O  (2-2-2 0-0-0-0)  491-
+ u_accumulator/U12 (139)  MUX (mx02d0)
+     S         I  (1-1-5 0-0-0-0)  130-u_accumulator/U3/ZN
+     I0        I  (1-1-0 0-0-0-0)  499-u_alu/alu_out_reg_4_/Q
+     I1        I  (1-1-0 0-0-0-0)  490-u_accumulator/accum_reg_4_/Q
+     Z         O  (2-2-3 0-0-0-0)  140-u_accumulator/accum_reg_4_/D
+ u_accumulator/accum_reg_4_ (140)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  139-u_accumulator/U12/Z
+     SD        I  (1-1-0 0-0-0-0)  491-u_accumulator/accum_reg_3_/Q
+     ---       O  (2-2-2 0-0-0-0)  490-
+ u_accumulator/U14 (141)  MUX (mx02d0)
+     S         I  (1-1-5 0-0-0-0)  130-u_accumulator/U3/ZN
+     I0        I  (1-1-0 0-0-0-0)  500-u_alu/alu_out_reg_5_/Q
+     I1        I  (1-1-0 0-0-0-0)  489-u_accumulator/accum_reg_5_/Q
+     Z         O  (2-2-3 0-0-0-0)  142-u_accumulator/accum_reg_5_/D
+ u_accumulator/accum_reg_5_ (142)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  141-u_accumulator/U14/Z
+     SD        I  (1-1-0 0-0-0-0)  490-u_accumulator/accum_reg_4_/Q
+     ---       O  (2-2-2 0-0-0-0)  489-
+ u_accumulator/U16 (143)  MUX (mx02d0)
+     S         I  (1-1-5 0-0-0-0)  130-u_accumulator/U3/ZN
+     I0        I  (1-1-0 0-0-0-0)  501-u_alu/alu_out_reg_6_/Q
+     I1        I  (1-1-0 0-0-0-0)  488-u_accumulator/accum_reg_6_/Q
+     Z         O  (2-2-3 0-0-0-0)  144-u_accumulator/accum_reg_6_/D
+ u_accumulator/accum_reg_6_ (144)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  143-u_accumulator/U16/Z
+     SD        I  (1-1-0 0-0-0-0)  489-u_accumulator/accum_reg_5_/Q
+     ---       O  (2-2-2 0-0-0-0)  488-
+ u_accumulator/U18 (145)  MUX (mx02d0)
+     S         I  (1-1-5 0-0-0-0)  130-u_accumulator/U3/ZN
+     I0        I  (1-1-0 0-0-0-0)  502-u_alu/alu_out_reg_7_/Q
+     I1        I  (1-1-0 0-0-0-0)  487-u_accumulator/accum_reg_7_/Q
+     Z         O  (2-2-3 0-0-0-0)  146-u_accumulator/accum_reg_7_/D
+ u_accumulator/accum_reg_7_ (146)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  145-u_accumulator/U18/Z
+     SD        I  (1-1-0 0-0-0-0)  488-u_accumulator/accum_reg_6_/Q
+     ---       O  (2-2-2 0-0-0-0)  487-
+ u_machine/U5 (147)  AND (an02d0)
+     A2        I  (1-1-0 0-0-0-0)  520-u_machine/state_reg_1_/Q
+     A1        I  (1-1-0 0-0-0-0)  517-u_machine/state_reg_0_/Q
+     Z         O  (1-2-6 0-0-0-0)  149-u_machine/U24/A1
+                                   166-u_machine/U32/C2 ...
+ u_machine/U6 (148)  OR (or02d0)
+     A2        I  (1-1-0 0-0-0-0)  520-u_machine/state_reg_1_/Q
+     A1        I  (1-1-0 0-0-0-0)  517-u_machine/state_reg_0_/Q
+     Z         O  (2-1-6 0-0-0-0)  149-u_machine/U24/A2
+                                   158-u_machine/U43/C2
+ u_machine/U24 (149)  OR (nd12d0)
+    !A2        I  (2-1-6 0-0-0-0)  148-u_machine/U6/Z
+     A1        I  (1-2-6 0-0-0-0)  147-u_machine/U5/Z
+     ZN        O  (2-2-5 0-0-0-0)  182-u_machine/U35/A4
+                                   150-u_machine/U25/A2
+ u_machine/U25 (150)  NOR (nr02d0)
+     A1        I  (1-1-0 0-0-0-0)  518-u_machine/state_reg_3_/Q
+     A2        I  (2-2-5 0-0-0-0)  149-u_machine/U24/ZN
+     ZN        O  (1-3-4 0-0-0-0)  151-u_machine/U10/A2
+                                   172-u_machine/U44/A2
+ u_machine/U10 (151)  AND (an02d0)
+     A2        I  (1-3-4 0-0-0-0)  150-u_machine/U25/ZN
+     A1        I  (1-1-0 0-0-0-0)  516-u_machine/ena_reg/Q
+     Z         O  (1-4-3 0-0-0-0)  152-u_machine/state_reg_1_/D
+                                   173-u_machine/U39/A2
+ u_machine/state_reg_1_ (152)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-4-3 0-0-0-0)  151-u_machine/U10/Z
+     SD        I  (1-1-0 0-0-0-0)  517-u_machine/state_reg_0_/Q
+     ---       O  (2-2-2 0-0-0-0)  520-
+ u_machine/U28 (153)  AND (nr23d1)
+    !A3        I  (1-1-0 0-0-0-0)  520-u_machine/state_reg_1_/Q
+     A2        I  (1-1-0 0-0-0-0)  521-u_machine/state_reg_2_/Q
+     A1        I  (1-3-3 0-0-0-0)  128-u_machine/U27/ZN
+     ZN        O  (1-5-5 0-0-0-0)  155-u_machine/U11/A1
+                                   154-u_machine/U37/A3
+ u_machine/U37 (154)  NAND (nd03d0)
+     A3        I  (1-5-5 0-0-0-0)  153-u_machine/U28/ZN
+     A2        I  (1-1-0 0-0-0-0)  477-u_instruction_reg/opc_iraddr_reg_14_/Q
+     A1        I  (1-1-0 0-0-0-0)  471-u_instruction_reg/opc_iraddr_reg_15_/Q
+     ZN        O  (7-1-4 0-0-0-0)  161-u_machine/U41/A2
+                                   194-u_machine/U8/A2
+ u_machine/U11 (155)  AND (an02d0)
+     A1        I  (1-5-5 0-0-0-0)  153-u_machine/U28/ZN
+     A2        I  (2-2-8 0-0-0-0)  83-u_machine/U30/ZN
+     Z         O  (1-7-3 0-0-0-0)  188-u_machine/load_acc_reg/D
+                                   162-u_machine/U45/B
+ u_machine/U31 (156)  NOR (nr02d0)
+     A1        I  (1-1-0 0-0-0-0)  521-u_machine/state_reg_2_/Q
+     A2        I  (1-2-6 0-0-0-0)  147-u_machine/U5/Z
+     ZN        O  (1-2-7 0-0-0-0)  157-u_machine/U32/B
+ u_machine/U32 (157)  BUF (aor211d1)
+     B         I  (1-2-7 0-0-0-0)  156-u_machine/U31/ZN
+     ---       O  (1-2-7 0-0-0-0)  165-
+                                   166-
+ u_machine/U43 (158)  AND (aor221d1)
+     C1        I  (1-1-0 0-0-0-0)  518-u_machine/state_reg_3_/Q
+     C2        I  (2-1-6 0-0-0-0)  148-u_machine/U6/Z
+     ---       O  (1-2-5 0-0-0-0)  160-
+ u_machine/U43 (159)  AND (aor221d1)
+     B2        I  (1-1-0 0-0-0-0)  521-u_machine/state_reg_2_/Q
+     B1        I  (1-1-0 0-0-0-0)  518-u_machine/state_reg_3_/Q
+     ---       O  (1-2-5 0-0-0-0)  160-
+ u_machine/U43 (160)  OR (aor221d1)
+     A         I  (1-1-5 0-0-0-0)  127-u_machine/U26/ZN
+     ---       I  (1-2-5 0-0-0-0)  159-
+     ---       I  (1-2-5 0-0-0-0)  158-
+     Z         O  (3-1-3 0-0-0-0)  163-u_machine/state_reg_3_/D
+                                   172-u_machine/U44/A3
+ u_machine/U41 (161)  NOR (nr02d0)
+     A2        I  (7-1-4 0-0-0-0)  154-u_machine/U37/ZN
+     A1        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     ZN        O  (1-8-3 0-0-0-0)  164-u_machine/wr_reg/D
+                                   180-u_machine/U42/A
+ u_machine/U45 (162)  BUF (aor211d1)
+     B         I  (1-7-3 0-0-0-0)  155-u_machine/U11/Z
+     ---       O  (1-7-7 0-0-0-0)  200-
+                                   199-
+ u_machine/state_reg_3_ (163)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (3-1-3 0-0-0-0)  160-u_machine/U43/Z
+     SD        I  (1-1-0 0-0-0-0)  521-u_machine/state_reg_2_/Q
+     ---       O  (2-2-2 0-0-0-0)  518-
+ u_machine/wr_reg (164)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-8-3 0-0-0-0)  161-u_machine/U41/ZN
+     SD        I  (1-1-0 0-0-0-0)  518-u_machine/state_reg_3_/Q
+     ---       O  (2-2-2 0-0-0-0)  523-
+ u_machine/U32 (165)  OR (aor211d1)
+     ---       I  (1-1-7 0-0-0-0)  129-
+     C1        I  (1-1-0 0-0-0-0)  521-u_machine/state_reg_2_/Q
+     ---       I  (1-2-7 0-0-0-0)  157-
+     ---       O  (3-1-5 0-0-0-0)  167-
+ u_machine/U32 (166)  OR (aor211d1)
+     ---       I  (1-1-7 0-0-0-0)  129-
+     ---       I  (1-2-7 0-0-0-0)  157-
+     C2        I  (1-2-6 0-0-0-0)  147-u_machine/U5/Z
+     ---       O  (3-1-5 0-0-0-0)  167-
+ u_machine/U32 (167)  AND (aor211d1)
+     ---       I  (3-1-5 0-0-0-0)  165-
+     ---       I  (3-1-5 0-0-0-0)  166-
+     Z         O  (3-2-4 0-0-0-0)  168-u_machine/U33/A1
+                                   196-u_machine/U38/B2 ...
+ u_machine/U33 (168)  NOR (nr02d0)
+     A2        I  (1-1-5 0-0-0-0)  127-u_machine/U26/ZN
+     A1        I  (3-2-4 0-0-0-0)  167-u_machine/U32/Z
+     ZN        O  (1-4-3 0-0-0-0)  169-u_machine/state_reg_2_/D
+                                   182-u_machine/U35/A1 ...
+ u_machine/state_reg_2_ (169)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-4-3 0-0-0-0)  168-u_machine/U33/ZN
+     SD        I  (1-1-0 0-0-0-0)  520-u_machine/state_reg_1_/Q
+     ---       O  (2-2-2 0-0-0-0)  521-
+ u_machine/U3 (170)  AND (an02d0)
+     A2        I  (1-4-3 0-0-0-0)  168-u_machine/U33/ZN
+     A1        I  (1-1-0 0-0-0-0)  517-u_machine/state_reg_0_/Q
+     Z         O  (1-5-7 0-0-0-0)  179-u_machine/U42/B1
+                                   200-u_machine/U45/C2
+ u_machine/U9 (171)  INV (inv0d0)
+     I         I  (3-2-4 0-0-0-0)  167-u_machine/U32/Z
+     ZN        O  (2-3-7 0-0-0-0)  172-u_machine/U44/A1
+ u_machine/U44 (172)  NOR (nr03d0)
+     A3        I  (3-1-3 0-0-0-0)  160-u_machine/U43/Z
+     A2        I  (1-3-4 0-0-0-0)  150-u_machine/U25/ZN
+     A1        I  (2-3-7 0-0-0-0)  171-u_machine/U9/ZN
+     ZN        O  (1-6-3 0-0-0-0)  177-u_machine/load_ir_reg/D
+                                   176-u_machine/U45/A
+ u_machine/U39 (173)  NAND (nd03d0)
+     A2        I  (1-4-3 0-0-0-0)  151-u_machine/U10/Z
+     A1        I  (1-2-9 0-0-0-0)  81-u_machine/U29/ZN
+     A3        I  (3-2-4 0-0-0-0)  167-u_machine/U32/Z
+     ZN        O  (8-1-5 0-0-0-0)  174-u_machine/U40/A3
+ u_machine/U40 (174)  NOR (nr03d0)
+     A3        I  (8-1-5 0-0-0-0)  173-u_machine/U39/ZN
+     A2        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     A1        I  (1-1-0 0-0-0-0)  517-u_machine/state_reg_0_/Q
+     ZN        O  (1-10-3 0-0-0-0)  175-u_machine/halt_reg/D
+ u_machine/halt_reg (175)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-10-3 0-0-0-0)  174-u_machine/U40/ZN
+     SD        I  (1-1-0 0-0-0-0)  516-u_machine/ena_reg/Q
+     ---       O  (2-2-2 0-0-0-0)  525-
+ u_machine/U45 (176)  BUF (aor211d1)
+     A         I  (1-6-3 0-0-0-0)  172-u_machine/U44/ZN
+     ---       O  (1-6-7 0-0-0-0)  200-
+                                   199-
+ u_machine/load_ir_reg (177)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-6-3 0-0-0-0)  172-u_machine/U44/ZN
+     SD        I  (1-1-0 0-0-0-0)  519-u_machine/load_acc_reg/Q
+     ---       O  (2-2-2 0-0-0-0)  522-
+ u_machine/U7 (178)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     ZN        O  (1-1-11 0-0-0-0)  179-u_machine/U42/B3
+ u_machine/U42 (179)  AND (aor31d1)
+     B2        I  (1-2-9 0-0-0-0)  80-u_machine/U4/Z
+     B1        I  (1-5-7 0-0-0-0)  170-u_machine/U3/Z
+     B3        I  (1-1-11 0-0-0-0)  178-u_machine/U7/ZN
+     ---       O  (1-8-4 0-0-0-0)  180-
+ u_machine/U42 (180)  OR (aor31d1)
+     ---       I  (1-8-4 0-0-0-0)  179-
+     A         I  (1-8-3 0-0-0-0)  161-u_machine/U41/ZN
+     Z         O  (2-8-3 0-0-0-0)  181-u_machine/data_ctl_ena_reg/D
+ u_machine/data_ctl_ena_reg (181)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-8-3 0-0-0-0)  180-u_machine/U42/Z
+     SD        I  (1-1-0 0-0-0-0)  470-u_instruction_reg/state_reg/Q
+     ---       O  (2-2-2 0-0-0-0)  527-
+ u_machine/U35 (182)  AND (an04d0)
+     A3        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     A2        I  (1-2-9 0-0-0-0)  80-u_machine/U4/Z
+     A1        I  (1-4-3 0-0-0-0)  168-u_machine/U33/ZN
+     A4        I  (2-2-5 0-0-0-0)  149-u_machine/U24/ZN
+     Z         O  (1-9-3 0-0-0-0)  183-u_machine/load_pc_reg/D
+ u_machine/load_pc_reg (183)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-9-3 0-0-0-0)  182-u_machine/U35/Z
+     SD        I  (1-1-0 0-0-0-0)  522-u_machine/load_ir_reg/Q
+     ---       O  (2-2-2 0-0-0-0)  526-
+ u_instruction_reg/U20 (184)  AND (an12d1)
+     A2        I  (1-1-0 0-0-0-0)  522-u_machine/load_ir_reg/Q
+    !A1        I  (1-1-0 0-0-0-0)  470-u_instruction_reg/state_reg/Q
+     Z         O  (1-2-3 0-0-0-0)  186-u_instruction_reg/state_reg/D
+                                   308-u_instruction_reg/U21/S ...
+ u_instruction_reg/U28 (185)  NAND (nd02d0)
+     A2        I  (1-1-0 0-0-0-0)  470-u_instruction_reg/state_reg/Q
+     A1        I  (1-1-0 0-0-0-0)  522-u_machine/load_ir_reg/Q
+     ZN        O  (2-1-6 0-0-0-0)  310-u_instruction_reg/U30/S
+                                   316-u_instruction_reg/U31/S ...
+ u_instruction_reg/state_reg (186)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-2-3 0-0-0-0)  184-u_instruction_reg/U20/Z
+     SD        I  (1-1-0 0-0-0-0)  471-u_instruction_reg/opc_iraddr_reg_15_/Q
+     ---       O  (2-2-2 0-0-0-0)  470-
+ u_machine/U48 (187)  MUX (mx02d1)
+     S         I  (1-1-4 0-0-0-0)  2-test_mode
+     I0        I  (1-1-0 0-0-0-0)  524-u_machine/inc_pc_reg/Q
+     I1        I  (1-1-3 0-0-0-0)  0-clk
+     Z         O  (2-2-3 0-0-0-0)  503-u_counter/pc_addr_reg_12_/CP
+                                   504-u_counter/pc_addr_reg_11_/CP ...
+ u_machine/load_acc_reg (188)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-7-3 0-0-0-0)  155-u_machine/U11/Z
+     SD        I  (1-1-0 0-0-0-0)  524-u_machine/inc_pc_reg/Q
+     ---       O  (2-2-2 0-0-0-0)  519-
+ u_alu/U85 (189)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  488-u_accumulator/accum_reg_6_/Q
+     ZN        O  (1-1-18 0-0-0-0)  191-u_alu/U86/A3
+ u_alu/U84 (190)  NOR (nr04d0)
+     A4        I  (1-1-0 0-0-0-0)  492-u_accumulator/accum_reg_2_/Q
+     A3        I  (1-1-0 0-0-0-0)  491-u_accumulator/accum_reg_3_/Q
+     A2        I  (1-1-0 0-0-0-0)  490-u_accumulator/accum_reg_4_/Q
+     A1        I  (1-1-0 0-0-0-0)  489-u_accumulator/accum_reg_5_/Q
+     ZN        O  (1-4-15 0-0-0-0)  191-u_alu/U86/A1
+ u_alu/U86 (191)  NAND (nd03d0)
+     A3        I  (1-1-18 0-0-0-0)  189-u_alu/U85/ZN
+     A2        I  (1-1-9 0-0-0-0)  89-u_alu/U10/ZN
+     A1        I  (1-4-15 0-0-0-0)  190-u_alu/U84/ZN
+     ZN        O  (6-1-13 0-0-0-0)  192-u_alu/U87/A3
+ u_alu/U87 (192)  NOR (nr03d0)
+     A3        I  (6-1-13 0-0-0-0)  191-u_alu/U86/ZN
+     A2        I  (1-1-0 0-0-0-0)  494-u_accumulator/accum_reg_0_/Q
+     A1        I  (1-1-0 0-0-0-0)  493-u_accumulator/accum_reg_1_/Q
+     ZN        O  (1-8-11 0-0-0-0)  193-u_machine/U36/A1
+ u_machine/U36 (193)  NAND (nd03d0)
+     A3        I  (1-3-3 0-0-0-0)  128-u_machine/U27/ZN
+     A2        I  (1-2-9 0-0-0-0)  81-u_machine/U29/ZN
+     A1        I  (1-8-11 0-0-0-0)  192-u_alu/U87/ZN
+     ZN        O  (13-1-6 0-0-0-0)  194-u_machine/U8/A1
+ u_machine/U8 (194)  NAND (nd02d0)
+     A2        I  (7-1-4 0-0-0-0)  154-u_machine/U37/ZN
+     A1        I  (13-1-6 0-0-0-0)  193-u_machine/U36/ZN
+     ZN        O  (2-7-5 0-0-0-0)  195-u_machine/U38/A2
+ u_machine/U38 (195)  AND (aor22d1)
+     A1        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     A2        I  (2-7-5 0-0-0-0)  194-u_machine/U8/ZN
+     ---       O  (1-8-4 0-0-0-0)  197-
+ u_machine/U38 (196)  AND (aor22d1)
+     B1        I  (1-3-3 0-0-0-0)  128-u_machine/U27/ZN
+     B2        I  (3-2-4 0-0-0-0)  167-u_machine/U32/Z
+     ---       O  (1-5-4 0-0-0-0)  197-
+ u_machine/U38 (197)  OR (aor22d1)
+     ---       I  (1-5-4 0-0-0-0)  196-
+     ---       I  (1-8-4 0-0-0-0)  195-
+     Z         O  (2-5-3 0-0-0-0)  198-u_machine/inc_pc_reg/D
+ u_machine/inc_pc_reg (198)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-5-3 0-0-0-0)  197-u_machine/U38/Z
+     SD        I  (1-1-0 0-0-0-0)  525-u_machine/halt_reg/Q
+     ---       O  (2-2-2 0-0-0-0)  524-
+ u_machine/U45 (199)  OR (aor211d1)
+     C1        I  (2-2-8 0-0-0-0)  83-u_machine/U30/ZN
+     ---       I  (1-6-7 0-0-0-0)  176-
+     ---       I  (1-7-7 0-0-0-0)  162-
+     ---       O  (4-2-8 0-0-0-0)  201-
+ u_machine/U45 (200)  OR (aor211d1)
+     C2        I  (1-5-7 0-0-0-0)  170-u_machine/U3/Z
+     ---       I  (1-6-7 0-0-0-0)  176-
+     ---       I  (1-7-7 0-0-0-0)  162-
+     ---       O  (3-5-5 0-0-0-0)  201-
+ u_machine/U45 (201)  AND (aor211d1)
+     ---       I  (3-5-5 0-0-0-0)  200-
+     ---       I  (4-2-8 0-0-0-0)  199-
+     Z         O  (3-7-3 0-0-0-0)  202-u_machine/rd_reg/D
+ u_machine/rd_reg (202)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (3-7-3 0-0-0-0)  201-u_machine/U45/Z
+     SD        I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     ---       O  (2-2-2 0-0-0-0)  528-
+ u_counter/U3 (203)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  515-u_counter/pc_addr_reg_0_/Q
+     ZN        O  (1-1-4 0-0-0-0)  204-u_counter/U4/I0
+ u_counter/U4 (204)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (1-1-4 0-0-0-0)  203-u_counter/U3/ZN
+     I1        I  (1-1-0 0-0-0-0)  474-u_instruction_reg/opc_iraddr_reg_0_/Q
+     Z         O  (2-2-3 0-0-0-0)  205-u_counter/pc_addr_reg_0_/D
+ u_counter/pc_addr_reg_0_ (205)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  204-u_counter/U4/Z
+     SD        I  (1-1-0 0-0-0-0)  502-u_alu/alu_out_reg_7_/Q
+     ---       O  (2-2-2 0-0-0-0)  515-
+ u_counter/U6 (206)  OR (ora21d1)
+     B1        I  (1-1-0 0-0-0-0)  514-u_counter/pc_addr_reg_1_/Q
+     B2        I  (1-1-0 0-0-0-0)  515-u_counter/pc_addr_reg_0_/Q
+     ---       O  (2-1-5 0-0-0-0)  207-
+ u_counter/U6 (207)  AND (ora21d1)
+     A         I  (2-1-5 0-0-0-0)  115-u_counter/U5/ZN
+     ---       I  (2-1-5 0-0-0-0)  206-
+     Z         O  (2-2-4 0-0-0-0)  208-u_counter/U7/I0
+ u_counter/U7 (208)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  207-u_counter/U6/Z
+     I1        I  (1-1-0 0-0-0-0)  476-u_instruction_reg/opc_iraddr_reg_1_/Q
+     Z         O  (2-2-3 0-0-0-0)  209-u_counter/pc_addr_reg_1_/D
+ u_counter/pc_addr_reg_1_ (209)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  208-u_counter/U7/Z
+     SD        I  (1-1-0 0-0-0-0)  515-u_counter/pc_addr_reg_0_/Q
+     ---       O  (2-2-2 0-0-0-0)  514-
+ u_counter/U9 (210)  MUX (mx02d0)
+     S         I  (2-1-5 0-0-0-0)  115-u_counter/U5/ZN
+     I0        I  (1-1-6 0-0-0-0)  112-u_counter/U8/ZN
+     I1        I  (1-1-0 0-0-0-0)  513-u_counter/pc_addr_reg_2_/Q
+     Z         O  (2-2-4 0-0-0-0)  211-u_counter/U10/I0
+ u_counter/U10 (211)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  210-u_counter/U9/Z
+     I1        I  (1-1-0 0-0-0-0)  486-u_instruction_reg/opc_iraddr_reg_2_/Q
+     Z         O  (2-2-3 0-0-0-0)  212-u_counter/pc_addr_reg_2_/D
+ u_counter/pc_addr_reg_2_ (212)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  211-u_counter/U10/Z
+     SD        I  (1-1-0 0-0-0-0)  514-u_counter/pc_addr_reg_1_/Q
+     ---       O  (2-2-2 0-0-0-0)  513-
+ u_counter/U25 (213)  OR (ora21d1)
+     B2        I  (1-1-0 0-0-0-0)  504-u_counter/pc_addr_reg_11_/Q
+     B1        I  (1-11-6 0-0-0-0)  125-u_counter/U23/ZN
+     ---       O  (2-1-5 0-0-0-0)  214-
+ u_counter/U25 (214)  AND (ora21d1)
+     ---       I  (2-1-5 0-0-0-0)  213-
+     A         I  (12-1-5 0-0-0-0)  126-u_counter/U24/ZN
+     Z         O  (2-2-4 0-0-0-0)  215-u_counter/U26/I0
+ u_counter/U26 (215)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  214-u_counter/U25/Z
+     I1        I  (1-1-0 0-0-0-0)  479-u_instruction_reg/opc_iraddr_reg_11_/Q
+     Z         O  (2-2-3 0-0-0-0)  216-u_counter/pc_addr_reg_11_/D
+ u_counter/pc_addr_reg_11_ (216)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  215-u_counter/U26/Z
+     SD        I  (1-1-0 0-0-0-0)  505-u_counter/pc_addr_reg_10_/Q
+     ---       O  (2-2-2 0-0-0-0)  504-
+ u_counter/U27 (217)  OR (ora21d1)
+     B2        I  (1-1-0 0-0-0-0)  506-u_counter/pc_addr_reg_9_/Q
+     B1        I  (1-9-6 0-0-0-0)  123-u_counter/U20/ZN
+     ---       O  (2-1-5 0-0-0-0)  218-
+ u_counter/U27 (218)  AND (ora21d1)
+     ---       I  (2-1-5 0-0-0-0)  217-
+     A         I  (10-1-5 0-0-0-0)  124-u_counter/U21/ZN
+     Z         O  (2-2-4 0-0-0-0)  219-u_counter/U28/I0
+ u_counter/U28 (219)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  218-u_counter/U27/Z
+     I1        I  (1-1-0 0-0-0-0)  475-u_instruction_reg/opc_iraddr_reg_9_/Q
+     Z         O  (2-2-3 0-0-0-0)  220-u_counter/pc_addr_reg_9_/D
+ u_counter/pc_addr_reg_9_ (220)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  219-u_counter/U28/Z
+     SD        I  (1-1-0 0-0-0-0)  507-u_counter/pc_addr_reg_8_/Q
+     ---       O  (2-2-2 0-0-0-0)  506-
+ u_counter/U29 (221)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  503-u_counter/pc_addr_reg_12_/Q
+     ZN        O  (1-1-16 0-0-0-0)  222-u_counter/U30/I0
+ u_counter/U30 (222)  MUX (mx02d0)
+     S         I  (12-1-5 0-0-0-0)  126-u_counter/U24/ZN
+     I0        I  (1-1-16 0-0-0-0)  221-u_counter/U29/ZN
+     I1        I  (1-1-0 0-0-0-0)  503-u_counter/pc_addr_reg_12_/Q
+     Z         O  (2-2-4 0-0-0-0)  223-u_counter/U31/I0
+ u_counter/U31 (223)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  222-u_counter/U30/Z
+     I1        I  (1-1-0 0-0-0-0)  478-u_instruction_reg/opc_iraddr_reg_12_/Q
+     Z         O  (2-2-3 0-0-0-0)  224-u_counter/pc_addr_reg_12_/D
+ u_counter/pc_addr_reg_12_ (224)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  223-u_counter/U31/Z
+     SD        I  (1-1-0 0-0-0-0)  504-u_counter/pc_addr_reg_11_/Q
+     ---       O  (2-2-2 0-0-0-0)  503-
+ u_counter/U32 (225)  MUX (mx02d0)
+     S         I  (4-1-5 0-0-0-0)  118-u_counter/U12/ZN
+     I0        I  (1-1-8 0-0-0-0)  109-u_counter/U13/ZN
+     I1        I  (1-1-0 0-0-0-0)  511-u_counter/pc_addr_reg_4_/Q
+     Z         O  (2-2-4 0-0-0-0)  226-u_counter/U33/I0
+ u_counter/U33 (226)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  225-u_counter/U32/Z
+     I1        I  (1-1-0 0-0-0-0)  484-u_instruction_reg/opc_iraddr_reg_4_/Q
+     Z         O  (2-2-3 0-0-0-0)  227-u_counter/pc_addr_reg_4_/D
+ u_counter/pc_addr_reg_4_ (227)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  226-u_counter/U33/Z
+     SD        I  (1-1-0 0-0-0-0)  512-u_counter/pc_addr_reg_3_/Q
+     ---       O  (2-2-2 0-0-0-0)  511-
+ u_counter/U34 (228)  OR (ora21d1)
+     B2        I  (1-1-0 0-0-0-0)  508-u_counter/pc_addr_reg_7_/Q
+     B1        I  (1-7-6 0-0-0-0)  121-u_counter/U17/ZN
+     ---       O  (2-1-5 0-0-0-0)  229-
+ u_counter/U34 (229)  AND (ora21d1)
+     ---       I  (2-1-5 0-0-0-0)  228-
+     A         I  (8-1-5 0-0-0-0)  122-u_counter/U18/ZN
+     Z         O  (2-2-4 0-0-0-0)  230-u_counter/U35/I0
+ u_counter/U35 (230)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  229-u_counter/U34/Z
+     I1        I  (1-1-0 0-0-0-0)  472-u_instruction_reg/opc_iraddr_reg_7_/Q
+     Z         O  (2-2-3 0-0-0-0)  231-u_counter/pc_addr_reg_7_/D
+ u_counter/pc_addr_reg_7_ (231)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  230-u_counter/U35/Z
+     SD        I  (1-1-0 0-0-0-0)  509-u_counter/pc_addr_reg_6_/Q
+     ---       O  (2-2-2 0-0-0-0)  508-
+ u_counter/U36 (232)  OR (ora21d1)
+     B2        I  (1-1-0 0-0-0-0)  510-u_counter/pc_addr_reg_5_/Q
+     B1        I  (1-5-6 0-0-0-0)  119-u_counter/U14/ZN
+     ---       O  (2-1-5 0-0-0-0)  233-
+ u_counter/U36 (233)  AND (ora21d1)
+     ---       I  (2-1-5 0-0-0-0)  232-
+     A         I  (6-1-5 0-0-0-0)  120-u_counter/U15/ZN
+     Z         O  (2-2-4 0-0-0-0)  234-u_counter/U37/I0
+ u_counter/U37 (234)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  233-u_counter/U36/Z
+     I1        I  (1-1-0 0-0-0-0)  483-u_instruction_reg/opc_iraddr_reg_5_/Q
+     Z         O  (2-2-3 0-0-0-0)  235-u_counter/pc_addr_reg_5_/D
+ u_counter/pc_addr_reg_5_ (235)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  234-u_counter/U37/Z
+     SD        I  (1-1-0 0-0-0-0)  511-u_counter/pc_addr_reg_4_/Q
+     ---       O  (2-2-2 0-0-0-0)  510-
+ u_counter/U38 (236)  OR (ora21d1)
+     B2        I  (1-1-0 0-0-0-0)  512-u_counter/pc_addr_reg_3_/Q
+     B1        I  (1-3-6 0-0-0-0)  117-u_counter/U11/ZN
+     ---       O  (2-1-5 0-0-0-0)  237-
+ u_counter/U38 (237)  AND (ora21d1)
+     ---       I  (2-1-5 0-0-0-0)  236-
+     A         I  (4-1-5 0-0-0-0)  118-u_counter/U12/ZN
+     Z         O  (2-2-4 0-0-0-0)  238-u_counter/U39/I0
+ u_counter/U39 (238)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  237-u_counter/U38/Z
+     I1        I  (1-1-0 0-0-0-0)  485-u_instruction_reg/opc_iraddr_reg_3_/Q
+     Z         O  (2-2-3 0-0-0-0)  239-u_counter/pc_addr_reg_3_/D
+ u_counter/pc_addr_reg_3_ (239)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  238-u_counter/U39/Z
+     SD        I  (1-1-0 0-0-0-0)  513-u_counter/pc_addr_reg_2_/Q
+     ---       O  (2-2-2 0-0-0-0)  512-
+ u_counter/U40 (240)  MUX (mx02d0)
+     S         I  (8-1-5 0-0-0-0)  122-u_counter/U18/ZN
+     I0        I  (1-1-12 0-0-0-0)  103-u_counter/U19/ZN
+     I1        I  (1-1-0 0-0-0-0)  507-u_counter/pc_addr_reg_8_/Q
+     Z         O  (2-2-4 0-0-0-0)  241-u_counter/U41/I0
+ u_counter/U41 (241)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  240-u_counter/U40/Z
+     I1        I  (1-1-0 0-0-0-0)  473-u_instruction_reg/opc_iraddr_reg_8_/Q
+     Z         O  (2-2-3 0-0-0-0)  242-u_counter/pc_addr_reg_8_/D
+ u_counter/pc_addr_reg_8_ (242)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  241-u_counter/U41/Z
+     SD        I  (1-1-0 0-0-0-0)  508-u_counter/pc_addr_reg_7_/Q
+     ---       O  (2-2-2 0-0-0-0)  507-
+ u_counter/U42 (243)  MUX (mx02d0)
+     S         I  (10-1-5 0-0-0-0)  124-u_counter/U21/ZN
+     I0        I  (1-1-14 0-0-0-0)  100-u_counter/U22/ZN
+     I1        I  (1-1-0 0-0-0-0)  505-u_counter/pc_addr_reg_10_/Q
+     Z         O  (2-2-4 0-0-0-0)  244-u_counter/U43/I0
+ u_counter/U43 (244)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  243-u_counter/U42/Z
+     I1        I  (1-1-0 0-0-0-0)  480-u_instruction_reg/opc_iraddr_reg_10_/Q
+     Z         O  (2-2-3 0-0-0-0)  245-u_counter/pc_addr_reg_10_/D
+ u_counter/pc_addr_reg_10_ (245)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  244-u_counter/U43/Z
+     SD        I  (1-1-0 0-0-0-0)  506-u_counter/pc_addr_reg_9_/Q
+     ---       O  (2-2-2 0-0-0-0)  505-
+ u_counter/U44 (246)  MUX (mx02d0)
+     S         I  (6-1-5 0-0-0-0)  120-u_counter/U15/ZN
+     I0        I  (1-1-10 0-0-0-0)  106-u_counter/U16/ZN
+     I1        I  (1-1-0 0-0-0-0)  509-u_counter/pc_addr_reg_6_/Q
+     Z         O  (2-2-4 0-0-0-0)  247-u_counter/U45/I0
+ u_counter/U45 (247)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  526-u_machine/load_pc_reg/Q
+     I0        I  (2-2-4 0-0-0-0)  246-u_counter/U44/Z
+     I1        I  (1-1-0 0-0-0-0)  482-u_instruction_reg/opc_iraddr_reg_6_/Q
+     Z         O  (2-2-3 0-0-0-0)  248-u_counter/pc_addr_reg_6_/D
+ u_counter/pc_addr_reg_6_ (248)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  247-u_counter/U45/Z
+     SD        I  (1-1-0 0-0-0-0)  510-u_counter/pc_addr_reg_5_/Q
+     ---       O  (2-2-2 0-0-0-0)  509-
+ u_machine/U34 (249)  INV (inv0d0)
+     I         I  (1-1-1 0-0-0-0)  1-rst_n
+     ZN        O  (1-1-1 0-0-0-0)  516-u_machine/ena_reg/CDN
+ U21 (250)  MUX (mx02d1)
+     S         I  (1-1-4 0-0-0-0)  2-test_mode
+     I0        I  (1-1-0 0-0-0-0)  465-u_clk_gen/fetch_reg/Q
+     I1        I  (1-1-3 0-0-0-0)  0-clk
+     Z         O  (2-2-2 0-0-0-0)  516-u_machine/ena_reg/CP
+ u_machine/ena_reg (251)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  ()  (TIE_1)
+     SD        I  (1-1-0 0-0-0-0)  527-u_machine/data_ctl_ena_reg/Q
+     ---       O  (2-1-2 0-0-0-0)  516-
+ u_data_ctl/U13 (252)  INV (inv0d0)
+     I         I  (1-1-3 0-0-0-0)  5-test_se
+     ZN        O  (1-1-3 0-0-0-0)  255-u_data_ctl/U11/A1
+ u_data_ctl/U10 (253)  NOR (nr02d0)
+     A2        I  (1-1-0 0-0-0-0)  527-u_machine/data_ctl_ena_reg/Q
+     A1        I  (1-1-4 0-0-0-0)  2-test_mode
+     ZN        O  (1-2-3 0-0-0-0)  254-u_data_ctl/U12/I
+ u_data_ctl/U12 (254)  INV (inv0d0)
+     I         I  (1-2-3 0-0-0-0)  253-u_data_ctl/U10/ZN
+     ZN        O  (2-1-3 0-0-0-0)  255-u_data_ctl/U11/A2
+ u_data_ctl/U11 (255)  NAND (nd02d0)
+     A1        I  (1-1-3 0-0-0-0)  252-u_data_ctl/U13/ZN
+     A2        I  (2-1-3 0-0-0-0)  254-u_data_ctl/U12/ZN
+     ZN        O  (2-1-2 0-0-0-0)  257-u_data_ctl/data_tri_0_/EN
+                                   260-u_data_ctl/data_tri_1_/EN ...
+ u_data_ctl/U9 (256)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  495-u_alu/alu_out_reg_0_/Q
+     ZN        O  (1-1-3 0-0-0-0)  257-u_data_ctl/data_tri_0_/I
+ u_data_ctl/data_tri_0_ (257)  TSD (invtd1)
+    !EN        I  (2-1-2 0-0-0-0)  255-u_data_ctl/U11/ZN
+    !I         I  (1-1-3 0-0-0-0)  256-u_data_ctl/U9/ZN
+     ZN        O  (3-3-1 0-0-0-0)  258-
+  (258)  BUS (cpu)
+     ---       I  (3-3-1 0-0-0-0)  257-u_data_ctl/data_tri_0_/ZN
+     ---       B  (1-1-0 0-0-0-0)  13-data[0]
+     ---       O  (1-1-0 0-0-0-0)  284-U18/I
+ Bus usage:  contention_status=bidi, Z-state_status=bidi, #drivers=2/0, behavior=BUS
+ u_data_ctl/U6 (259)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  497-u_alu/alu_out_reg_1_/Q
+     ZN        O  (1-1-3 0-0-0-0)  260-u_data_ctl/data_tri_1_/I
+ u_data_ctl/data_tri_1_ (260)  TSD (invtd1)
+    !EN        I  (2-1-2 0-0-0-0)  255-u_data_ctl/U11/ZN
+    !I         I  (1-1-3 0-0-0-0)  259-u_data_ctl/U6/ZN
+     ZN        O  (3-3-1 0-0-0-0)  261-
+  (261)  BUS (cpu)
+     ---       I  (3-3-1 0-0-0-0)  260-u_data_ctl/data_tri_1_/ZN
+     ---       B  (1-1-0 0-0-0-0)  12-data[1]
+     ---       O  (1-1-0 0-0-0-0)  286-U16/I
+ Bus usage:  contention_status=bidi, Z-state_status=bidi, #drivers=2/0, behavior=BUS
+ u_data_ctl/U8 (262)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  496-u_alu/alu_out_reg_2_/Q
+     ZN        O  (1-1-3 0-0-0-0)  263-u_data_ctl/data_tri_2_/I
+ u_data_ctl/data_tri_2_ (263)  TSD (invtd1)
+    !EN        I  (2-1-2 0-0-0-0)  255-u_data_ctl/U11/ZN
+    !I         I  (1-1-3 0-0-0-0)  262-u_data_ctl/U8/ZN
+     ZN        O  (3-3-1 0-0-0-0)  264-
+  (264)  BUS (cpu)
+     ---       I  (3-3-1 0-0-0-0)  263-u_data_ctl/data_tri_2_/ZN
+     ---       B  (1-1-0 0-0-0-0)  11-data[2]
+     ---       O  (1-1-0 0-0-0-0)  288-U15/I
+ Bus usage:  contention_status=bidi, Z-state_status=bidi, #drivers=2/0, behavior=BUS
+ u_data_ctl/U5 (265)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  498-u_alu/alu_out_reg_3_/Q
+     ZN        O  (1-1-3 0-0-0-0)  266-u_data_ctl/data_tri_3_/I
+ u_data_ctl/data_tri_3_ (266)  TSD (invtd1)
+    !EN        I  (2-1-2 0-0-0-0)  255-u_data_ctl/U11/ZN
+    !I         I  (1-1-3 0-0-0-0)  265-u_data_ctl/U5/ZN
+     ZN        O  (3-3-1 0-0-0-0)  267-
+  (267)  BUS (cpu)
+     ---       I  (3-3-1 0-0-0-0)  266-u_data_ctl/data_tri_3_/ZN
+     ---       B  (1-1-0 0-0-0-0)  10-data[3]
+     ---       O  (1-1-0 0-0-0-0)  290-U14/I
+ Bus usage:  contention_status=bidi, Z-state_status=bidi, #drivers=2/0, behavior=BUS
+ u_data_ctl/U2 (268)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  499-u_alu/alu_out_reg_4_/Q
+     ZN        O  (1-1-3 0-0-0-0)  269-u_data_ctl/data_tri_4_/I
+ u_data_ctl/data_tri_4_ (269)  TSD (invtd1)
+    !EN        I  (2-1-2 0-0-0-0)  255-u_data_ctl/U11/ZN
+    !I         I  (1-1-3 0-0-0-0)  268-u_data_ctl/U2/ZN
+     ZN        O  (3-3-1 0-0-0-0)  270-
+  (270)  BUS (cpu)
+     ---       I  (3-3-1 0-0-0-0)  269-u_data_ctl/data_tri_4_/ZN
+     ---       B  (1-1-0 0-0-0-0)  9-data[4]
+     ---       O  (1-1-0 0-0-0-0)  292-U13/I
+ Bus usage:  contention_status=bidi, Z-state_status=bidi, #drivers=2/0, behavior=BUS
+ u_data_ctl/U3 (271)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  500-u_alu/alu_out_reg_5_/Q
+     ZN        O  (1-1-3 0-0-0-0)  272-u_data_ctl/data_tri_5_/I
+ u_data_ctl/data_tri_5_ (272)  TSD (invtd1)
+    !EN        I  (2-1-2 0-0-0-0)  255-u_data_ctl/U11/ZN
+    !I         I  (1-1-3 0-0-0-0)  271-u_data_ctl/U3/ZN
+     ZN        O  (3-3-1 0-0-0-0)  273-
+  (273)  BUS (cpu)
+     ---       I  (3-3-1 0-0-0-0)  272-u_data_ctl/data_tri_5_/ZN
+     ---       B  (1-1-0 0-0-0-0)  8-data[5]
+     ---       O  (1-1-0 0-0-0-0)  294-U12/I
+ Bus usage:  contention_status=bidi, Z-state_status=bidi, #drivers=2/0, behavior=BUS
+ u_data_ctl/U4 (274)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  501-u_alu/alu_out_reg_6_/Q
+     ZN        O  (1-1-3 0-0-0-0)  275-u_data_ctl/data_tri_6_/I
+ u_data_ctl/data_tri_6_ (275)  TSD (invtd1)
+    !EN        I  (2-1-2 0-0-0-0)  255-u_data_ctl/U11/ZN
+    !I         I  (1-1-3 0-0-0-0)  274-u_data_ctl/U4/ZN
+     ZN        O  (3-3-1 0-0-0-0)  276-
+  (276)  BUS (cpu)
+     ---       I  (3-3-1 0-0-0-0)  275-u_data_ctl/data_tri_6_/ZN
+     ---       B  (1-1-0 0-0-0-0)  7-data[6]
+     ---       O  (1-1-0 0-0-0-0)  296-U11/I
+ Bus usage:  contention_status=bidi, Z-state_status=bidi, #drivers=2/0, behavior=BUS
+ u_data_ctl/U7 (277)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  502-u_alu/alu_out_reg_7_/Q
+     ZN        O  (1-1-3 0-0-0-0)  278-u_data_ctl/data_tri_7_/I
+ u_data_ctl/data_tri_7_ (278)  TSD (invtd1)
+    !EN        I  (2-1-2 0-0-0-0)  255-u_data_ctl/U11/ZN
+    !I         I  (1-1-3 0-0-0-0)  277-u_data_ctl/U7/ZN
+     ZN        O  (3-3-1 0-0-0-0)  279-
+  (279)  BUS (cpu)
+     ---       I  (3-3-1 0-0-0-0)  278-u_data_ctl/data_tri_7_/ZN
+     ---       B  (1-1-0 0-0-0-0)  6-data[7]
+     ---       O  (1-1-0 0-0-0-0)  298-U10/I
+ Bus usage:  contention_status=bidi, Z-state_status=bidi, #drivers=2/0, behavior=BUS
+ u_machine/state_reg_0_ (280)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (1-3-3 0-0-0-0)  128-u_machine/U27/ZN
+     SD        I  (1-1-0 0-0-0-0)  528-u_machine/rd_reg/Q
+     ---       O  (2-2-2 0-0-0-0)  517-
+ U17 (281)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  528-u_machine/rd_reg/Q
+     ZN        O  (1-1-7 0-0-0-0)  282-U20/I
+ U20 (282)  INV (inv0d0)
+     I         I  (1-1-7 0-0-0-0)  281-U17/ZN
+     ZN        O  (1-1-7 0-0-0-0)  283-U19/A2
+ U19 (283)  NOR (nr02d0)
+     A2        I  (1-1-7 0-0-0-0)  282-U20/ZN
+     A1        I  (1-1-3 0-0-0-0)  5-test_se
+     ZN        O  (1-2-6 0-0-0-0)  285-data_rd_tri_0_/EN
+                                   287-data_rd_tri_1_/EN ...
+ U18 (284)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  258-
+     ZN        O  (1-1-6 0-0-0-0)  285-data_rd_tri_0_/I
+ data_rd_tri_0_ (285)  TSD (invtd1)
+    !EN        I  (1-2-6 0-0-0-0)  283-U19/ZN
+    !I         I  (1-1-6 0-0-0-0)  284-U18/ZN
+     ZN        O  (2-2-5 0-0-0-0)  308-u_instruction_reg/U21/I1
+                                   310-u_instruction_reg/U30/I0 ...
+ U16 (286)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  261-
+     ZN        O  (1-1-6 0-0-0-0)  287-data_rd_tri_1_/I
+ data_rd_tri_1_ (287)  TSD (invtd1)
+    !EN        I  (1-2-6 0-0-0-0)  283-U19/ZN
+    !I         I  (1-1-6 0-0-0-0)  286-U16/ZN
+     ZN        O  (2-2-5 0-0-0-0)  314-u_instruction_reg/U22/I1
+                                   316-u_instruction_reg/U31/I0 ...
+ U15 (288)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  264-
+     ZN        O  (1-1-6 0-0-0-0)  289-data_rd_tri_2_/I
+ data_rd_tri_2_ (289)  TSD (invtd1)
+    !EN        I  (1-2-6 0-0-0-0)  283-U19/ZN
+    !I         I  (1-1-6 0-0-0-0)  288-U15/ZN
+     ZN        O  (2-2-5 0-0-0-0)  318-u_instruction_reg/U24/I1
+                                   320-u_instruction_reg/U36/I0 ...
+ U14 (290)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  267-
+     ZN        O  (1-1-6 0-0-0-0)  291-data_rd_tri_3_/I
+ data_rd_tri_3_ (291)  TSD (invtd1)
+    !EN        I  (1-2-6 0-0-0-0)  283-U19/ZN
+    !I         I  (1-1-6 0-0-0-0)  290-U14/ZN
+     ZN        O  (2-2-5 0-0-0-0)  322-u_instruction_reg/U23/I1
+                                   324-u_instruction_reg/U33/I0 ...
+ U13 (292)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  270-
+     ZN        O  (1-1-6 0-0-0-0)  293-data_rd_tri_4_/I
+ data_rd_tri_4_ (293)  TSD (invtd1)
+    !EN        I  (1-2-6 0-0-0-0)  283-U19/ZN
+    !I         I  (1-1-6 0-0-0-0)  292-U13/ZN
+     ZN        O  (2-2-5 0-0-0-0)  326-u_instruction_reg/U25/I1
+                                   328-u_instruction_reg/U35/I0 ...
+ U12 (294)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  273-
+     ZN        O  (1-1-6 0-0-0-0)  295-data_rd_tri_5_/I
+ data_rd_tri_5_ (295)  TSD (invtd1)
+    !EN        I  (1-2-6 0-0-0-0)  283-U19/ZN
+    !I         I  (1-1-6 0-0-0-0)  294-U12/ZN
+     ZN        O  (2-2-5 0-0-0-0)  330-u_instruction_reg/U37/I0
+                                   332-u_instruction_reg/U38/I1 ...
+ U11 (296)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  276-
+     ZN        O  (1-1-6 0-0-0-0)  297-data_rd_tri_6_/I
+ data_rd_tri_6_ (297)  TSD (invtd1)
+    !EN        I  (1-2-6 0-0-0-0)  283-U19/ZN
+    !I         I  (1-1-6 0-0-0-0)  296-U11/ZN
+     ZN        O  (2-2-5 0-0-0-0)  334-u_instruction_reg/U32/I1
+                                   336-u_instruction_reg/U34/I0 ...
+ U10 (298)  INV (inv0d0)
+     I         I  (1-1-0 0-0-0-0)  279-
+     ZN        O  (1-1-6 0-0-0-0)  299-data_rd_tri_7_/I
+ data_rd_tri_7_ (299)  TSD (invtd1)
+    !EN        I  (1-2-6 0-0-0-0)  283-U19/ZN
+    !I         I  (1-1-6 0-0-0-0)  298-U10/ZN
+     ZN        O  (2-2-5 0-0-0-0)  338-u_instruction_reg/U27/I1
+                                   340-u_instruction_reg/U29/I0 ...
+ u_alu/U8 (300)  NAND (nd02d0)
+     A1        I  (1-1-0 0-0-0-0)  494-u_accumulator/accum_reg_0_/Q
+     A2        I  (2-2-5 0-0-0-0)  285-data_rd_tri_0_/ZN
+     ZN        O  (3-1-7 0-0-0-0)  313-u_alu/U64/A2
+                                   312-u_alu/U18/I
+ u_alu/U94 (301)  BUF (ora211d1)
+     A         I  (2-2-5 0-0-0-0)  285-data_rd_tri_0_/ZN
+     ---       O  (2-2-10 0-0-0-0)  344-
+                                   345-
+ u_alu/U7 (302)  BUF (cg01d0)
+     CI        I  (2-2-5 0-0-0-0)  287-data_rd_tri_1_/ZN
+     ---       O  (2-2-12 0-0-0-0)  353-
+                                   355-
+ u_alu/U6 (303)  BUF (cg01d0)
+     B         I  (2-2-5 0-0-0-0)  289-data_rd_tri_2_/ZN
+     ---       O  (2-2-13 0-0-0-0)  373-
+                                   372-
+ u_alu/U5 (304)  BUF (cg01d0)
+     B         I  (2-2-5 0-0-0-0)  291-data_rd_tri_3_/ZN
+     ---       O  (2-2-13 0-0-0-0)  388-
+                                   387-
+ u_alu/U4 (305)  BUF (cg01d0)
+     B         I  (2-2-5 0-0-0-0)  293-data_rd_tri_4_/ZN
+     ---       O  (2-2-13 0-0-0-0)  403-
+                                   402-
+ u_alu/U3 (306)  BUF (cg01d0)
+     B         I  (2-2-5 0-0-0-0)  295-data_rd_tri_5_/ZN
+     ---       O  (2-2-13 0-0-0-0)  418-
+                                   417-
+ u_alu/U9 (307)  BUF (cg01d0)
+     B         I  (2-2-5 0-0-0-0)  297-data_rd_tri_6_/ZN
+     ---       O  (2-2-18 0-0-0-0)  433-
+                                   432-
+ u_instruction_reg/U21 (308)  MUX (mx02d0)
+     S         I  (1-2-3 0-0-0-0)  184-u_instruction_reg/U20/Z
+     I0        I  (1-1-0 0-0-0-0)  473-u_instruction_reg/opc_iraddr_reg_8_/Q
+     I1        I  (2-2-5 0-0-0-0)  285-data_rd_tri_0_/ZN
+     Z         O  (2-2-3 0-0-0-0)  309-u_instruction_reg/opc_iraddr_reg_8_/D
+ u_instruction_reg/opc_iraddr_reg_8_ (309)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  308-u_instruction_reg/U21/Z
+     SD        I  (1-1-0 0-0-0-0)  472-u_instruction_reg/opc_iraddr_reg_7_/Q
+     ---       O  (2-2-2 0-0-0-0)  473-
+ u_instruction_reg/U30 (310)  MUX (mx02d0)
+     S         I  (2-1-6 0-0-0-0)  185-u_instruction_reg/U28/ZN
+     I0        I  (2-2-5 0-0-0-0)  285-data_rd_tri_0_/ZN
+     I1        I  (1-1-0 0-0-0-0)  474-u_instruction_reg/opc_iraddr_reg_0_/Q
+     Z         O  (2-2-3 0-0-0-0)  311-u_instruction_reg/opc_iraddr_reg_0_/D
+ u_instruction_reg/opc_iraddr_reg_0_ (311)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  310-u_instruction_reg/U30/Z
+     SD        I  (1-1-0 0-0-0-0)  503-u_counter/pc_addr_reg_12_/Q
+     ---       O  (2-2-2 0-0-0-0)  474-
+ u_alu/U18 (312)  INV (inv0d0)
+     I         I  (3-1-7 0-0-0-0)  300-u_alu/U8/ZN
+     ZN        O  (1-3-7 0-0-0-0)  360-u_alu/U97/C1
+                                   342-u_alu/U65/A1 ...
+ u_alu/U64 (313)  NOR (nr02d0)
+     A2        I  (3-1-7 0-0-0-0)  300-u_alu/U8/ZN
+     A1        I  (3-1-8 0-0-0-0)  88-u_alu/U20/ZN
+     ZN        O  (1-6-6 0-0-0-0)  367-u_alu/U67/I0
+                                   364-u_alu/U69/A2
+ u_instruction_reg/U22 (314)  MUX (mx02d0)
+     S         I  (1-2-3 0-0-0-0)  184-u_instruction_reg/U20/Z
+     I0        I  (1-1-0 0-0-0-0)  475-u_instruction_reg/opc_iraddr_reg_9_/Q
+     I1        I  (2-2-5 0-0-0-0)  287-data_rd_tri_1_/ZN
+     Z         O  (2-2-3 0-0-0-0)  315-u_instruction_reg/opc_iraddr_reg_9_/D
+ u_instruction_reg/opc_iraddr_reg_9_ (315)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  314-u_instruction_reg/U22/Z
+     SD        I  (1-1-0 0-0-0-0)  473-u_instruction_reg/opc_iraddr_reg_8_/Q
+     ---       O  (2-2-2 0-0-0-0)  475-
+ u_instruction_reg/U31 (316)  MUX (mx02d0)
+     S         I  (2-1-6 0-0-0-0)  185-u_instruction_reg/U28/ZN
+     I0        I  (2-2-5 0-0-0-0)  287-data_rd_tri_1_/ZN
+     I1        I  (1-1-0 0-0-0-0)  476-u_instruction_reg/opc_iraddr_reg_1_/Q
+     Z         O  (2-2-3 0-0-0-0)  317-u_instruction_reg/opc_iraddr_reg_1_/D
+ u_instruction_reg/opc_iraddr_reg_1_ (317)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  316-u_instruction_reg/U31/Z
+     SD        I  (1-1-0 0-0-0-0)  474-u_instruction_reg/opc_iraddr_reg_0_/Q
+     ---       O  (2-2-2 0-0-0-0)  476-
+ u_instruction_reg/U24 (318)  MUX (mx02d0)
+     S         I  (1-2-3 0-0-0-0)  184-u_instruction_reg/U20/Z
+     I0        I  (1-1-0 0-0-0-0)  480-u_instruction_reg/opc_iraddr_reg_10_/Q
+     I1        I  (2-2-5 0-0-0-0)  289-data_rd_tri_2_/ZN
+     Z         O  (2-2-3 0-0-0-0)  319-u_instruction_reg/opc_iraddr_reg_10_/D
+ u_instruction_reg/opc_iraddr_reg_10_ (319)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  318-u_instruction_reg/U24/Z
+     SD        I  (1-1-0 0-0-0-0)  475-u_instruction_reg/opc_iraddr_reg_9_/Q
+     ---       O  (2-2-2 0-0-0-0)  480-
+ u_instruction_reg/U36 (320)  MUX (mx02d0)
+     S         I  (2-1-6 0-0-0-0)  185-u_instruction_reg/U28/ZN
+     I0        I  (2-2-5 0-0-0-0)  289-data_rd_tri_2_/ZN
+     I1        I  (1-1-0 0-0-0-0)  486-u_instruction_reg/opc_iraddr_reg_2_/Q
+     Z         O  (2-2-3 0-0-0-0)  321-u_instruction_reg/opc_iraddr_reg_2_/D
+ u_instruction_reg/opc_iraddr_reg_2_ (321)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  320-u_instruction_reg/U36/Z
+     SD        I  (1-1-0 0-0-0-0)  476-u_instruction_reg/opc_iraddr_reg_1_/Q
+     ---       O  (2-2-2 0-0-0-0)  486-
+ u_instruction_reg/U23 (322)  MUX (mx02d0)
+     S         I  (1-2-3 0-0-0-0)  184-u_instruction_reg/U20/Z
+     I0        I  (1-1-0 0-0-0-0)  479-u_instruction_reg/opc_iraddr_reg_11_/Q
+     I1        I  (2-2-5 0-0-0-0)  291-data_rd_tri_3_/ZN
+     Z         O  (2-2-3 0-0-0-0)  323-u_instruction_reg/opc_iraddr_reg_11_/D
+ u_instruction_reg/opc_iraddr_reg_11_ (323)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  322-u_instruction_reg/U23/Z
+     SD        I  (1-1-0 0-0-0-0)  480-u_instruction_reg/opc_iraddr_reg_10_/Q
+     ---       O  (2-2-2 0-0-0-0)  479-
+ u_instruction_reg/U33 (324)  MUX (mx02d0)
+     S         I  (2-1-6 0-0-0-0)  185-u_instruction_reg/U28/ZN
+     I0        I  (2-2-5 0-0-0-0)  291-data_rd_tri_3_/ZN
+     I1        I  (1-1-0 0-0-0-0)  485-u_instruction_reg/opc_iraddr_reg_3_/Q
+     Z         O  (2-2-3 0-0-0-0)  325-u_instruction_reg/opc_iraddr_reg_3_/D
+ u_instruction_reg/opc_iraddr_reg_3_ (325)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  324-u_instruction_reg/U33/Z
+     SD        I  (1-1-0 0-0-0-0)  486-u_instruction_reg/opc_iraddr_reg_2_/Q
+     ---       O  (2-2-2 0-0-0-0)  485-
+ u_instruction_reg/U25 (326)  MUX (mx02d0)
+     S         I  (1-2-3 0-0-0-0)  184-u_instruction_reg/U20/Z
+     I0        I  (1-1-0 0-0-0-0)  478-u_instruction_reg/opc_iraddr_reg_12_/Q
+     I1        I  (2-2-5 0-0-0-0)  293-data_rd_tri_4_/ZN
+     Z         O  (2-2-3 0-0-0-0)  327-u_instruction_reg/opc_iraddr_reg_12_/D
+ u_instruction_reg/opc_iraddr_reg_12_ (327)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  326-u_instruction_reg/U25/Z
+     SD        I  (1-1-0 0-0-0-0)  479-u_instruction_reg/opc_iraddr_reg_11_/Q
+     ---       O  (2-2-2 0-0-0-0)  478-
+ u_instruction_reg/U35 (328)  MUX (mx02d0)
+     S         I  (2-1-6 0-0-0-0)  185-u_instruction_reg/U28/ZN
+     I0        I  (2-2-5 0-0-0-0)  293-data_rd_tri_4_/ZN
+     I1        I  (1-1-0 0-0-0-0)  484-u_instruction_reg/opc_iraddr_reg_4_/Q
+     Z         O  (2-2-3 0-0-0-0)  329-u_instruction_reg/opc_iraddr_reg_4_/D
+ u_instruction_reg/opc_iraddr_reg_4_ (329)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  328-u_instruction_reg/U35/Z
+     SD        I  (1-1-0 0-0-0-0)  485-u_instruction_reg/opc_iraddr_reg_3_/Q
+     ---       O  (2-2-2 0-0-0-0)  484-
+ u_instruction_reg/U37 (330)  MUX (mx02d0)
+     S         I  (2-1-6 0-0-0-0)  185-u_instruction_reg/U28/ZN
+     I0        I  (2-2-5 0-0-0-0)  295-data_rd_tri_5_/ZN
+     I1        I  (1-1-0 0-0-0-0)  483-u_instruction_reg/opc_iraddr_reg_5_/Q
+     Z         O  (2-2-3 0-0-0-0)  331-u_instruction_reg/opc_iraddr_reg_5_/D
+ u_instruction_reg/opc_iraddr_reg_5_ (331)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  330-u_instruction_reg/U37/Z
+     SD        I  (1-1-0 0-0-0-0)  484-u_instruction_reg/opc_iraddr_reg_4_/Q
+     ---       O  (2-2-2 0-0-0-0)  483-
+ u_instruction_reg/U38 (332)  MUX (mx02d0)
+     S         I  (1-2-3 0-0-0-0)  184-u_instruction_reg/U20/Z
+     I0        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     I1        I  (2-2-5 0-0-0-0)  295-data_rd_tri_5_/ZN
+     Z         O  (2-2-3 0-0-0-0)  333-u_instruction_reg/opc_iraddr_reg_13_/D
+ u_instruction_reg/opc_iraddr_reg_13_ (333)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  332-u_instruction_reg/U38/Z
+     SD        I  (1-1-0 0-0-0-0)  478-u_instruction_reg/opc_iraddr_reg_12_/Q
+     ---       O  (2-2-2 0-0-0-0)  481-
+ u_instruction_reg/U32 (334)  MUX (mx02d0)
+     S         I  (1-2-3 0-0-0-0)  184-u_instruction_reg/U20/Z
+     I0        I  (1-1-0 0-0-0-0)  477-u_instruction_reg/opc_iraddr_reg_14_/Q
+     I1        I  (2-2-5 0-0-0-0)  297-data_rd_tri_6_/ZN
+     Z         O  (2-2-3 0-0-0-0)  335-u_instruction_reg/opc_iraddr_reg_14_/D
+ u_instruction_reg/opc_iraddr_reg_14_ (335)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  334-u_instruction_reg/U32/Z
+     SD        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     ---       O  (2-2-2 0-0-0-0)  477-
+ u_instruction_reg/U34 (336)  MUX (mx02d0)
+     S         I  (2-1-6 0-0-0-0)  185-u_instruction_reg/U28/ZN
+     I0        I  (2-2-5 0-0-0-0)  297-data_rd_tri_6_/ZN
+     I1        I  (1-1-0 0-0-0-0)  482-u_instruction_reg/opc_iraddr_reg_6_/Q
+     Z         O  (2-2-3 0-0-0-0)  337-u_instruction_reg/opc_iraddr_reg_6_/D
+ u_instruction_reg/opc_iraddr_reg_6_ (337)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  336-u_instruction_reg/U34/Z
+     SD        I  (1-1-0 0-0-0-0)  483-u_instruction_reg/opc_iraddr_reg_5_/Q
+     ---       O  (2-2-2 0-0-0-0)  482-
+ u_instruction_reg/U27 (338)  MUX (mx02d0)
+     S         I  (1-2-3 0-0-0-0)  184-u_instruction_reg/U20/Z
+     I0        I  (1-1-0 0-0-0-0)  471-u_instruction_reg/opc_iraddr_reg_15_/Q
+     I1        I  (2-2-5 0-0-0-0)  299-data_rd_tri_7_/ZN
+     Z         O  (2-2-3 0-0-0-0)  339-u_instruction_reg/opc_iraddr_reg_15_/D
+ u_instruction_reg/opc_iraddr_reg_15_ (339)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  338-u_instruction_reg/U27/Z
+     SD        I  (1-1-0 0-0-0-0)  477-u_instruction_reg/opc_iraddr_reg_14_/Q
+     ---       O  (2-2-2 0-0-0-0)  471-
+ u_instruction_reg/U29 (340)  MUX (mx02d0)
+     S         I  (2-1-6 0-0-0-0)  185-u_instruction_reg/U28/ZN
+     I0        I  (2-2-5 0-0-0-0)  299-data_rd_tri_7_/ZN
+     I1        I  (1-1-0 0-0-0-0)  472-u_instruction_reg/opc_iraddr_reg_7_/Q
+     Z         O  (2-2-3 0-0-0-0)  341-u_instruction_reg/opc_iraddr_reg_7_/D
+ u_instruction_reg/opc_iraddr_reg_7_ (341)  MUX (sdcrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (2-2-3 0-0-0-0)  340-u_instruction_reg/U29/Z
+     SD        I  (1-1-0 0-0-0-0)  482-u_instruction_reg/opc_iraddr_reg_6_/Q
+     ---       O  (2-2-2 0-0-0-0)  472-
+ u_alu/U65 (342)  NOR (nr02d0)
+     A2        I  (3-1-8 0-0-0-0)  88-u_alu/U20/ZN
+     A1        I  (1-3-7 0-0-0-0)  312-u_alu/U18/ZN
+     ZN        O  (1-4-7 0-0-0-0)  365-u_alu/U66/A1
+                                   366-u_alu/U68/A2
+ u_alu/U7 (343)  BUF (cg01d0)
+     B         I  (1-3-7 0-0-0-0)  312-u_alu/U18/ZN
+     ---       O  (1-3-12 0-0-0-0)  354-
+                                   355-
+ u_alu/U94 (344)  AND (ora211d1)
+     ---       I  (1-1-11 0-0-0-0)  97-
+     C2        I  (1-2-7 0-0-0-0)  85-u_alu/U19/ZN
+     ---       I  (2-2-10 0-0-0-0)  301-
+     ---       O  (1-5-7 0-0-0-0)  346-
+ u_alu/U94 (345)  AND (ora211d1)
+     ---       I  (1-1-11 0-0-0-0)  97-
+     C1        I  (1-3-8 0-0-0-0)  86-u_alu/U43/ZN
+     ---       I  (2-2-10 0-0-0-0)  301-
+     ---       O  (1-6-7 0-0-0-0)  346-
+ u_alu/U94 (346)  OR (ora211d1)
+     ---       I  (1-5-7 0-0-0-0)  344-
+     ---       I  (1-6-7 0-0-0-0)  345-
+     Z         O  (2-5-6 0-0-0-0)  347-u_alu/U97/A
+ u_alu/U97 (347)  BUF (aor211d1)
+     A         I  (2-5-6 0-0-0-0)  346-u_alu/U94/Z
+     ---       O  (2-5-6 0-0-0-0)  360-
+                                   361-
+ u_alu/U95 (348)  AND (aoim22d1)
+     A2        I  (2-1-7 0-0-0-0)  82-u_alu/U15/ZN
+     A1        I  (2-1-9 0-0-0-0)  79-u_alu/U50/ZN
+     ---       O  (2-2-9 0-0-0-0)  350-
+ u_alu/U95 (349)  AND (aoim22d1)
+    !B1        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+    !B2        I  (2-2-5 0-0-0-0)  285-data_rd_tri_0_/ZN
+     ---       O  (1-3-10 0-0-0-0)  350-
+ u_alu/U95 (350)  NOR (aoim22d1)
+     ---       I  (2-2-9 0-0-0-0)  348-
+     ---       I  (1-3-10 0-0-0-0)  349-
+     Z         O  (2-3-8 0-0-0-0)  351-u_alu/U96/A1
+ u_alu/U96 (351)  NOR (nr02d0)
+     A2        I  (1-1-9 0-0-0-0)  96-u_alu/U34/ZN
+     A1        I  (2-3-8 0-0-0-0)  350-u_alu/U95/Z
+     ZN        O  (1-3-7 0-0-0-0)  352-u_alu/U97/B
+ u_alu/U97 (352)  BUF (aor211d1)
+     B         I  (1-3-7 0-0-0-0)  351-u_alu/U96/ZN
+     ---       O  (1-3-7 0-0-0-0)  360-
+                                   361-
+ u_alu/U7 (353)  AND (cg01d0)
+     ---       I  (1-1-13 0-0-0-0)  95-
+     ---       I  (2-2-12 0-0-0-0)  302-
+     ---       O  (1-3-11 0-0-0-0)  356-
+ u_alu/U7 (354)  AND (cg01d0)
+     ---       I  (1-3-12 0-0-0-0)  343-
+     ---       I  (1-1-13 0-0-0-0)  95-
+     ---       O  (1-4-11 0-0-0-0)  356-
+ u_alu/U7 (355)  AND (cg01d0)
+     ---       I  (1-3-12 0-0-0-0)  343-
+     ---       I  (2-2-12 0-0-0-0)  302-
+     ---       O  (1-5-11 0-0-0-0)  356-
+ u_alu/U7 (356)  OR (cg01d0)
+     ---       I  (1-3-11 0-0-0-0)  353-
+     ---       I  (1-4-11 0-0-0-0)  354-
+     ---       I  (1-5-11 0-0-0-0)  355-
+     CO        O  (3-3-9 0-0-0-0)  357-u_alu/U16/A1
+                                    358-u_alu/U72/A2 ...
+ u_alu/U16 (357)  AND (an02d0)
+     A2        I  (1-3-8 0-0-0-0)  86-u_alu/U43/ZN
+     A1        I  (3-3-9 0-0-0-0)  356-u_alu/U7/CO
+     Z         O  (1-6-6 0-0-0-0)  383-u_alu/U73/I0
+                                   379-u_alu/U75/A2
+ u_alu/U72 (358)  NOR (nr02d0)
+     A1        I  (3-1-8 0-0-0-0)  88-u_alu/U20/ZN
+     A2        I  (3-3-9 0-0-0-0)  356-u_alu/U7/CO
+     ZN        O  (1-6-7 0-0-0-0)  381-u_alu/U33/A1
+                                   380-u_alu/U74/A2
+ u_alu/U6 (359)  BUF (cg01d0)
+     CI        I  (3-3-9 0-0-0-0)  356-u_alu/U7/CO
+     ---       O  (3-3-13 0-0-0-0)  373-
+                                   374-
+ u_alu/U97 (360)  OR (aor211d1)
+     ---       I  (1-3-7 0-0-0-0)  352-
+     C1        I  (1-3-7 0-0-0-0)  312-u_alu/U18/ZN
+     ---       I  (2-5-6 0-0-0-0)  347-
+     ---       O  (4-3-4 0-0-0-0)  362-
+ u_alu/U97 (361)  OR (aor211d1)
+     C2        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     ---       I  (1-3-7 0-0-0-0)  352-
+     ---       I  (2-5-6 0-0-0-0)  347-
+     ---       O  (4-1-6 0-0-0-0)  362-
+ u_alu/U97 (362)  AND (aor211d1)
+     ---       I  (4-3-4 0-0-0-0)  360-
+     ---       I  (4-1-6 0-0-0-0)  361-
+     Z         O  (4-4-3 0-0-0-0)  363-u_alu/alu_out_reg_0_/D
+ u_alu/alu_out_reg_0_ (363)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (4-4-3 0-0-0-0)  362-u_alu/U97/Z
+     SD        I  (1-1-0 0-0-0-0)  487-u_accumulator/accum_reg_7_/Q
+     ---       O  (2-2-2 0-0-0-0)  495-
+ u_alu/U69 (364)  NOR (nr02d0)
+     A1        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     A2        I  (1-6-6 0-0-0-0)  313-u_alu/U64/ZN
+     ZN        O  (1-2-8 0-0-0-0)  368-u_alu/U70/I1
+ u_alu/U66 (365)  OR (nd12d0)
+    !A2        I  (2-1-7 0-0-0-0)  82-u_alu/U15/ZN
+     A1        I  (1-4-7 0-0-0-0)  342-u_alu/U65/ZN
+     ZN        O  (2-2-6 0-0-0-0)  367-u_alu/U67/I1
+ u_alu/U68 (366)  NOR (nr02d0)
+     A1        I  (1-3-9 0-0-0-0)  87-u_alu/U46/ZN
+     A2        I  (1-4-7 0-0-0-0)  342-u_alu/U65/ZN
+     ZN        O  (3-2-8 0-0-0-0)  368-u_alu/U70/I0
+ u_alu/U67 (367)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  287-data_rd_tri_1_/ZN
+     I0        I  (1-6-6 0-0-0-0)  313-u_alu/U64/ZN
+     I1        I  (2-2-6 0-0-0-0)  365-u_alu/U66/ZN
+     Z         O  (3-4-4 0-0-0-0)  370-u_alu/U71/I0
+ u_alu/U70 (368)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  287-data_rd_tri_1_/ZN
+     I0        I  (3-2-8 0-0-0-0)  366-u_alu/U68/ZN
+     I1        I  (1-2-8 0-0-0-0)  364-u_alu/U69/ZN
+     Z         O  (3-4-6 0-0-0-0)  369-u_alu/U31/A1
+ u_alu/U31 (369)  NAND (nd02d0)
+     A2        I  (2-2-8 0-0-0-0)  84-u_alu/U17/ZN
+     A1        I  (3-4-6 0-0-0-0)  368-u_alu/U70/Z
+     ZN        O  (6-2-4 0-0-0-0)  370-u_alu/U71/I1
+ u_alu/U71 (370)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  493-u_accumulator/accum_reg_1_/Q
+     I0        I  (3-4-4 0-0-0-0)  367-u_alu/U67/Z
+     I1        I  (6-2-4 0-0-0-0)  369-u_alu/U31/ZN
+     Z         O  (4-3-3 0-0-0-0)  371-u_alu/alu_out_reg_1_/D
+ u_alu/alu_out_reg_1_ (371)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (4-3-3 0-0-0-0)  370-u_alu/U71/Z
+     SD        I  (1-1-0 0-0-0-0)  495-u_alu/alu_out_reg_0_/Q
+     ---       O  (2-2-2 0-0-0-0)  497-
+ u_alu/U6 (372)  AND (cg01d0)
+     ---       I  (1-1-14 0-0-0-0)  94-
+     ---       I  (2-2-13 0-0-0-0)  303-
+     ---       O  (1-3-12 0-0-0-0)  375-
+ u_alu/U6 (373)  AND (cg01d0)
+     ---       I  (2-2-13 0-0-0-0)  303-
+     ---       I  (3-3-13 0-0-0-0)  359-
+     ---       O  (2-5-11 0-0-0-0)  375-
+ u_alu/U6 (374)  AND (cg01d0)
+     ---       I  (1-1-14 0-0-0-0)  94-
+     ---       I  (3-3-13 0-0-0-0)  359-
+     ---       O  (1-4-12 0-0-0-0)  375-
+ u_alu/U6 (375)  OR (cg01d0)
+     ---       I  (1-3-12 0-0-0-0)  372-
+     ---       I  (1-4-12 0-0-0-0)  374-
+     ---       I  (2-5-11 0-0-0-0)  373-
+     CO        O  (4-3-9 0-0-0-0)  376-u_alu/U14/A1
+                                    377-u_alu/U78/A2 ...
+ u_alu/U14 (376)  AND (an02d0)
+     A2        I  (1-3-8 0-0-0-0)  86-u_alu/U43/ZN
+     A1        I  (4-3-9 0-0-0-0)  375-u_alu/U6/CO
+     Z         O  (1-6-6 0-0-0-0)  398-u_alu/U79/I0
+                                   394-u_alu/U81/A2
+ u_alu/U78 (377)  NOR (nr02d0)
+     A1        I  (3-1-8 0-0-0-0)  88-u_alu/U20/ZN
+     A2        I  (4-3-9 0-0-0-0)  375-u_alu/U6/CO
+     ZN        O  (1-7-7 0-0-0-0)  396-u_alu/U30/A1
+                                   395-u_alu/U80/A2
+ u_alu/U5 (378)  BUF (cg01d0)
+     CI        I  (4-3-9 0-0-0-0)  375-u_alu/U6/CO
+     ---       O  (4-3-13 0-0-0-0)  388-
+                                   389-
+ u_alu/U75 (379)  NOR (nr02d0)
+     A1        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     A2        I  (1-6-6 0-0-0-0)  357-u_alu/U16/Z
+     ZN        O  (1-2-8 0-0-0-0)  382-u_alu/U76/I1
+ u_alu/U74 (380)  NOR (nr02d0)
+     A1        I  (1-3-9 0-0-0-0)  87-u_alu/U46/ZN
+     A2        I  (1-6-7 0-0-0-0)  358-u_alu/U72/ZN
+     ZN        O  (3-2-8 0-0-0-0)  382-u_alu/U76/I0
+ u_alu/U33 (381)  OR (or02d0)
+     A2        I  (1-2-7 0-0-0-0)  85-u_alu/U19/ZN
+     A1        I  (1-6-7 0-0-0-0)  358-u_alu/U72/ZN
+     Z         O  (2-2-6 0-0-0-0)  383-u_alu/U73/I1
+ u_alu/U76 (382)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  289-data_rd_tri_2_/ZN
+     I0        I  (3-2-8 0-0-0-0)  380-u_alu/U74/ZN
+     I1        I  (1-2-8 0-0-0-0)  379-u_alu/U75/ZN
+     Z         O  (3-4-6 0-0-0-0)  384-u_alu/U32/A1
+ u_alu/U73 (383)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  289-data_rd_tri_2_/ZN
+     I0        I  (1-6-6 0-0-0-0)  357-u_alu/U16/Z
+     I1        I  (2-2-6 0-0-0-0)  381-u_alu/U33/Z
+     Z         O  (3-4-4 0-0-0-0)  385-u_alu/U77/I0
+ u_alu/U32 (384)  NAND (nd02d0)
+     A2        I  (2-2-8 0-0-0-0)  84-u_alu/U17/ZN
+     A1        I  (3-4-6 0-0-0-0)  382-u_alu/U76/Z
+     ZN        O  (6-2-4 0-0-0-0)  385-u_alu/U77/I1
+ u_alu/U77 (385)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  492-u_accumulator/accum_reg_2_/Q
+     I0        I  (3-4-4 0-0-0-0)  383-u_alu/U73/Z
+     I1        I  (6-2-4 0-0-0-0)  384-u_alu/U32/ZN
+     Z         O  (4-3-3 0-0-0-0)  386-u_alu/alu_out_reg_2_/D
+ u_alu/alu_out_reg_2_ (386)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (4-3-3 0-0-0-0)  385-u_alu/U77/Z
+     SD        I  (1-1-0 0-0-0-0)  497-u_alu/alu_out_reg_1_/Q
+     ---       O  (2-2-2 0-0-0-0)  496-
+ u_alu/U5 (387)  AND (cg01d0)
+     ---       I  (1-1-14 0-0-0-0)  93-
+     ---       I  (2-2-13 0-0-0-0)  304-
+     ---       O  (1-3-12 0-0-0-0)  390-
+ u_alu/U5 (388)  AND (cg01d0)
+     ---       I  (2-2-13 0-0-0-0)  304-
+     ---       I  (4-3-13 0-0-0-0)  378-
+     ---       O  (2-5-11 0-0-0-0)  390-
+ u_alu/U5 (389)  AND (cg01d0)
+     ---       I  (1-1-14 0-0-0-0)  93-
+     ---       I  (4-3-13 0-0-0-0)  378-
+     ---       O  (1-4-12 0-0-0-0)  390-
+ u_alu/U5 (390)  OR (cg01d0)
+     ---       I  (1-3-12 0-0-0-0)  387-
+     ---       I  (1-4-12 0-0-0-0)  389-
+     ---       I  (2-5-11 0-0-0-0)  388-
+     CO        O  (4-3-9 0-0-0-0)  391-u_alu/U13/A1
+                                    392-u_alu/U44/A2 ...
+ u_alu/U13 (391)  AND (an02d0)
+     A2        I  (1-3-8 0-0-0-0)  86-u_alu/U43/ZN
+     A1        I  (4-3-9 0-0-0-0)  390-u_alu/U5/CO
+     Z         O  (1-6-6 0-0-0-0)  413-u_alu/U45/I0
+                                   409-u_alu/U48/A2
+ u_alu/U44 (392)  NOR (nr02d0)
+     A1        I  (3-1-8 0-0-0-0)  88-u_alu/U20/ZN
+     A2        I  (4-3-9 0-0-0-0)  390-u_alu/U5/CO
+     ZN        O  (1-7-7 0-0-0-0)  411-u_alu/U28/A1
+                                   410-u_alu/U47/A2
+ u_alu/U4 (393)  BUF (cg01d0)
+     CI        I  (4-3-9 0-0-0-0)  390-u_alu/U5/CO
+     ---       O  (4-3-13 0-0-0-0)  403-
+                                   404-
+ u_alu/U81 (394)  NOR (nr02d0)
+     A1        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     A2        I  (1-6-6 0-0-0-0)  376-u_alu/U14/Z
+     ZN        O  (1-2-8 0-0-0-0)  397-u_alu/U82/I1
+ u_alu/U80 (395)  NOR (nr02d0)
+     A1        I  (1-3-9 0-0-0-0)  87-u_alu/U46/ZN
+     A2        I  (1-7-7 0-0-0-0)  377-u_alu/U78/ZN
+     ZN        O  (3-2-8 0-0-0-0)  397-u_alu/U82/I0
+ u_alu/U30 (396)  OR (or02d0)
+     A2        I  (1-2-7 0-0-0-0)  85-u_alu/U19/ZN
+     A1        I  (1-7-7 0-0-0-0)  377-u_alu/U78/ZN
+     Z         O  (2-2-6 0-0-0-0)  398-u_alu/U79/I1
+ u_alu/U82 (397)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  291-data_rd_tri_3_/ZN
+     I0        I  (3-2-8 0-0-0-0)  395-u_alu/U80/ZN
+     I1        I  (1-2-8 0-0-0-0)  394-u_alu/U81/ZN
+     Z         O  (3-4-6 0-0-0-0)  399-u_alu/U29/A1
+ u_alu/U79 (398)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  291-data_rd_tri_3_/ZN
+     I0        I  (1-6-6 0-0-0-0)  376-u_alu/U14/Z
+     I1        I  (2-2-6 0-0-0-0)  396-u_alu/U30/Z
+     Z         O  (3-4-4 0-0-0-0)  400-u_alu/U83/I0
+ u_alu/U29 (399)  NAND (nd02d0)
+     A2        I  (2-2-8 0-0-0-0)  84-u_alu/U17/ZN
+     A1        I  (3-4-6 0-0-0-0)  397-u_alu/U82/Z
+     ZN        O  (6-2-4 0-0-0-0)  400-u_alu/U83/I1
+ u_alu/U83 (400)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  491-u_accumulator/accum_reg_3_/Q
+     I0        I  (3-4-4 0-0-0-0)  398-u_alu/U79/Z
+     I1        I  (6-2-4 0-0-0-0)  399-u_alu/U29/ZN
+     Z         O  (4-3-3 0-0-0-0)  401-u_alu/alu_out_reg_3_/D
+ u_alu/alu_out_reg_3_ (401)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (4-3-3 0-0-0-0)  400-u_alu/U83/Z
+     SD        I  (1-1-0 0-0-0-0)  496-u_alu/alu_out_reg_2_/Q
+     ---       O  (2-2-2 0-0-0-0)  498-
+ u_alu/U4 (402)  AND (cg01d0)
+     ---       I  (1-1-14 0-0-0-0)  92-
+     ---       I  (2-2-13 0-0-0-0)  305-
+     ---       O  (1-3-12 0-0-0-0)  405-
+ u_alu/U4 (403)  AND (cg01d0)
+     ---       I  (2-2-13 0-0-0-0)  305-
+     ---       I  (4-3-13 0-0-0-0)  393-
+     ---       O  (2-5-11 0-0-0-0)  405-
+ u_alu/U4 (404)  AND (cg01d0)
+     ---       I  (1-1-14 0-0-0-0)  92-
+     ---       I  (4-3-13 0-0-0-0)  393-
+     ---       O  (1-4-12 0-0-0-0)  405-
+ u_alu/U4 (405)  OR (cg01d0)
+     ---       I  (1-3-12 0-0-0-0)  402-
+     ---       I  (1-4-12 0-0-0-0)  404-
+     ---       I  (2-5-11 0-0-0-0)  403-
+     CO        O  (4-3-9 0-0-0-0)  406-u_alu/U12/A1
+                                    407-u_alu/U52/A2 ...
+ u_alu/U12 (406)  AND (an02d0)
+     A2        I  (1-3-8 0-0-0-0)  86-u_alu/U43/ZN
+     A1        I  (4-3-9 0-0-0-0)  405-u_alu/U4/CO
+     Z         O  (1-6-6 0-0-0-0)  428-u_alu/U53/I0
+                                   424-u_alu/U55/A2
+ u_alu/U52 (407)  NOR (nr02d0)
+     A1        I  (3-1-8 0-0-0-0)  88-u_alu/U20/ZN
+     A2        I  (4-3-9 0-0-0-0)  405-u_alu/U4/CO
+     ZN        O  (1-7-7 0-0-0-0)  426-u_alu/U26/A1
+                                   425-u_alu/U54/A2
+ u_alu/U3 (408)  BUF (cg01d0)
+     CI        I  (4-3-9 0-0-0-0)  405-u_alu/U4/CO
+     ---       O  (4-3-13 0-0-0-0)  418-
+                                   419-
+ u_alu/U48 (409)  NOR (nr02d0)
+     A1        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     A2        I  (1-6-6 0-0-0-0)  391-u_alu/U13/Z
+     ZN        O  (1-2-8 0-0-0-0)  412-u_alu/U49/I1
+ u_alu/U47 (410)  NOR (nr02d0)
+     A1        I  (1-3-9 0-0-0-0)  87-u_alu/U46/ZN
+     A2        I  (1-7-7 0-0-0-0)  392-u_alu/U44/ZN
+     ZN        O  (3-2-8 0-0-0-0)  412-u_alu/U49/I0
+ u_alu/U28 (411)  OR (or02d0)
+     A2        I  (1-2-7 0-0-0-0)  85-u_alu/U19/ZN
+     A1        I  (1-7-7 0-0-0-0)  392-u_alu/U44/ZN
+     Z         O  (2-2-6 0-0-0-0)  413-u_alu/U45/I1
+ u_alu/U49 (412)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  293-data_rd_tri_4_/ZN
+     I0        I  (3-2-8 0-0-0-0)  410-u_alu/U47/ZN
+     I1        I  (1-2-8 0-0-0-0)  409-u_alu/U48/ZN
+     Z         O  (3-4-6 0-0-0-0)  414-u_alu/U27/A1
+ u_alu/U45 (413)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  293-data_rd_tri_4_/ZN
+     I0        I  (1-6-6 0-0-0-0)  391-u_alu/U13/Z
+     I1        I  (2-2-6 0-0-0-0)  411-u_alu/U28/Z
+     Z         O  (3-4-4 0-0-0-0)  415-u_alu/U51/I0
+ u_alu/U27 (414)  NAND (nd02d0)
+     A2        I  (2-2-8 0-0-0-0)  84-u_alu/U17/ZN
+     A1        I  (3-4-6 0-0-0-0)  412-u_alu/U49/Z
+     ZN        O  (6-2-4 0-0-0-0)  415-u_alu/U51/I1
+ u_alu/U51 (415)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  490-u_accumulator/accum_reg_4_/Q
+     I0        I  (3-4-4 0-0-0-0)  413-u_alu/U45/Z
+     I1        I  (6-2-4 0-0-0-0)  414-u_alu/U27/ZN
+     Z         O  (4-3-3 0-0-0-0)  416-u_alu/alu_out_reg_4_/D
+ u_alu/alu_out_reg_4_ (416)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (4-3-3 0-0-0-0)  415-u_alu/U51/Z
+     SD        I  (1-1-0 0-0-0-0)  498-u_alu/alu_out_reg_3_/Q
+     ---       O  (2-2-2 0-0-0-0)  499-
+ u_alu/U3 (417)  AND (cg01d0)
+     ---       I  (1-1-14 0-0-0-0)  91-
+     ---       I  (2-2-13 0-0-0-0)  306-
+     ---       O  (1-3-12 0-0-0-0)  420-
+ u_alu/U3 (418)  AND (cg01d0)
+     ---       I  (2-2-13 0-0-0-0)  306-
+     ---       I  (4-3-13 0-0-0-0)  408-
+     ---       O  (2-5-11 0-0-0-0)  420-
+ u_alu/U3 (419)  AND (cg01d0)
+     ---       I  (1-1-14 0-0-0-0)  91-
+     ---       I  (4-3-13 0-0-0-0)  408-
+     ---       O  (1-4-12 0-0-0-0)  420-
+ u_alu/U3 (420)  OR (cg01d0)
+     ---       I  (1-3-12 0-0-0-0)  417-
+     ---       I  (1-4-12 0-0-0-0)  419-
+     ---       I  (2-5-11 0-0-0-0)  418-
+     CO        O  (4-3-9 0-0-0-0)  422-u_alu/U11/A1
+                                    423-u_alu/U58/A2 ...
+ u_alu/U9 (421)  BUF (cg01d0)
+     CI        I  (4-3-9 0-0-0-0)  420-u_alu/U3/CO
+     ---       O  (4-3-18 0-0-0-0)  433-
+                                   434-
+ u_alu/U11 (422)  AND (an02d0)
+     A2        I  (1-3-8 0-0-0-0)  86-u_alu/U43/ZN
+     A1        I  (4-3-9 0-0-0-0)  420-u_alu/U3/CO
+     Z         O  (1-6-6 0-0-0-0)  441-u_alu/U59/I0
+                                   437-u_alu/U61/A2
+ u_alu/U58 (423)  NOR (nr02d0)
+     A1        I  (3-1-8 0-0-0-0)  88-u_alu/U20/ZN
+     A2        I  (4-3-9 0-0-0-0)  420-u_alu/U3/CO
+     ZN        O  (1-7-7 0-0-0-0)  439-u_alu/U24/A1
+                                   438-u_alu/U60/A2
+ u_alu/U55 (424)  NOR (nr02d0)
+     A1        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     A2        I  (1-6-6 0-0-0-0)  406-u_alu/U12/Z
+     ZN        O  (1-2-8 0-0-0-0)  427-u_alu/U56/I1
+ u_alu/U54 (425)  NOR (nr02d0)
+     A1        I  (1-3-9 0-0-0-0)  87-u_alu/U46/ZN
+     A2        I  (1-7-7 0-0-0-0)  407-u_alu/U52/ZN
+     ZN        O  (3-2-8 0-0-0-0)  427-u_alu/U56/I0
+ u_alu/U26 (426)  OR (or02d0)
+     A2        I  (1-2-7 0-0-0-0)  85-u_alu/U19/ZN
+     A1        I  (1-7-7 0-0-0-0)  407-u_alu/U52/ZN
+     Z         O  (2-2-6 0-0-0-0)  428-u_alu/U53/I1
+ u_alu/U56 (427)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  295-data_rd_tri_5_/ZN
+     I0        I  (3-2-8 0-0-0-0)  425-u_alu/U54/ZN
+     I1        I  (1-2-8 0-0-0-0)  424-u_alu/U55/ZN
+     Z         O  (3-4-6 0-0-0-0)  429-u_alu/U25/A1
+ u_alu/U53 (428)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  295-data_rd_tri_5_/ZN
+     I0        I  (1-6-6 0-0-0-0)  406-u_alu/U12/Z
+     I1        I  (2-2-6 0-0-0-0)  426-u_alu/U26/Z
+     Z         O  (3-4-4 0-0-0-0)  430-u_alu/U57/I0
+ u_alu/U25 (429)  NAND (nd02d0)
+     A2        I  (2-2-8 0-0-0-0)  84-u_alu/U17/ZN
+     A1        I  (3-4-6 0-0-0-0)  427-u_alu/U56/Z
+     ZN        O  (6-2-4 0-0-0-0)  430-u_alu/U57/I1
+ u_alu/U57 (430)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  489-u_accumulator/accum_reg_5_/Q
+     I0        I  (3-4-4 0-0-0-0)  428-u_alu/U53/Z
+     I1        I  (6-2-4 0-0-0-0)  429-u_alu/U25/ZN
+     Z         O  (4-3-3 0-0-0-0)  431-u_alu/alu_out_reg_5_/D
+ u_alu/alu_out_reg_5_ (431)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (4-3-3 0-0-0-0)  430-u_alu/U57/Z
+     SD        I  (1-1-0 0-0-0-0)  499-u_alu/alu_out_reg_4_/Q
+     ---       O  (2-2-2 0-0-0-0)  500-
+ u_alu/U9 (432)  AND (cg01d0)
+     ---       I  (1-1-19 0-0-0-0)  90-
+     ---       I  (2-2-18 0-0-0-0)  307-
+     ---       O  (1-3-17 0-0-0-0)  435-
+ u_alu/U9 (433)  AND (cg01d0)
+     ---       I  (2-2-18 0-0-0-0)  307-
+     ---       I  (4-3-18 0-0-0-0)  421-
+     ---       O  (2-5-16 0-0-0-0)  435-
+ u_alu/U9 (434)  AND (cg01d0)
+     ---       I  (1-1-19 0-0-0-0)  90-
+     ---       I  (4-3-18 0-0-0-0)  421-
+     ---       O  (1-4-17 0-0-0-0)  435-
+ u_alu/U9 (435)  OR (cg01d0)
+     ---       I  (1-3-17 0-0-0-0)  432-
+     ---       I  (1-4-17 0-0-0-0)  434-
+     ---       I  (2-5-16 0-0-0-0)  433-
+     CO        O  (4-3-14 0-0-0-0)  436-u_alu/U88/S
+ u_alu/U88 (436)  MUX (mx02d0)
+     S         I  (4-3-14 0-0-0-0)  435-u_alu/U9/CO
+     I0        I  (1-1-0 0-0-0-0)  487-u_accumulator/accum_reg_7_/Q
+     I1        I  (1-1-9 0-0-0-0)  89-u_alu/U10/ZN
+     Z         O  (4-4-12 0-0-0-0)  451-u_alu/U91/A2
+                                   450-u_alu/U89/A2
+ u_alu/U61 (437)  NOR (nr02d0)
+     A1        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     A2        I  (1-6-6 0-0-0-0)  422-u_alu/U11/Z
+     ZN        O  (1-2-8 0-0-0-0)  440-u_alu/U62/I1
+ u_alu/U60 (438)  NOR (nr02d0)
+     A1        I  (1-3-9 0-0-0-0)  87-u_alu/U46/ZN
+     A2        I  (1-7-7 0-0-0-0)  423-u_alu/U58/ZN
+     ZN        O  (3-2-8 0-0-0-0)  440-u_alu/U62/I0
+ u_alu/U24 (439)  OR (or02d0)
+     A2        I  (1-2-7 0-0-0-0)  85-u_alu/U19/ZN
+     A1        I  (1-7-7 0-0-0-0)  423-u_alu/U58/ZN
+     Z         O  (2-2-6 0-0-0-0)  441-u_alu/U59/I1
+ u_alu/U62 (440)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  297-data_rd_tri_6_/ZN
+     I0        I  (3-2-8 0-0-0-0)  438-u_alu/U60/ZN
+     I1        I  (1-2-8 0-0-0-0)  437-u_alu/U61/ZN
+     Z         O  (3-4-6 0-0-0-0)  442-u_alu/U23/A1
+ u_alu/U59 (441)  MUX (mx02d0)
+     S         I  (2-2-5 0-0-0-0)  297-data_rd_tri_6_/ZN
+     I0        I  (1-6-6 0-0-0-0)  422-u_alu/U11/Z
+     I1        I  (2-2-6 0-0-0-0)  439-u_alu/U24/Z
+     Z         O  (3-4-4 0-0-0-0)  443-u_alu/U63/I0
+ u_alu/U23 (442)  NAND (nd02d0)
+     A2        I  (2-2-8 0-0-0-0)  84-u_alu/U17/ZN
+     A1        I  (3-4-6 0-0-0-0)  440-u_alu/U62/Z
+     ZN        O  (6-2-4 0-0-0-0)  443-u_alu/U63/I1
+ u_alu/U63 (443)  MUX (mx02d0)
+     S         I  (1-1-0 0-0-0-0)  488-u_accumulator/accum_reg_6_/Q
+     I0        I  (3-4-4 0-0-0-0)  441-u_alu/U59/Z
+     I1        I  (6-2-4 0-0-0-0)  442-u_alu/U23/ZN
+     Z         O  (4-3-3 0-0-0-0)  444-u_alu/alu_out_reg_6_/D
+ u_alu/alu_out_reg_6_ (444)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (4-3-3 0-0-0-0)  443-u_alu/U63/Z
+     SD        I  (1-1-0 0-0-0-0)  500-u_alu/alu_out_reg_5_/Q
+     ---       O  (2-2-2 0-0-0-0)  501-
+ u_alu/U90 (445)  AND (aor221d1)
+     B2        I  (1-1-0 0-0-0-0)  481-u_instruction_reg/opc_iraddr_reg_13_/Q
+     B1        I  (1-1-0 0-0-0-0)  487-u_accumulator/accum_reg_7_/Q
+     ---       O  (1-2-10 0-0-0-0)  452-
+ u_alu/U91 (446)  AND (aor22d1)
+     B2        I  (1-3-9 0-0-0-0)  87-u_alu/U46/ZN
+     B1        I  (1-1-0 0-0-0-0)  487-u_accumulator/accum_reg_7_/Q
+     ---       O  (1-4-9 0-0-0-0)  453-
+ u_alu/U90 (447)  AND (aor221d1)
+     C1        I  (1-1-9 0-0-0-0)  89-u_alu/U10/ZN
+     C2        I  (1-2-7 0-0-0-0)  85-u_alu/U19/ZN
+     ---       O  (1-3-10 0-0-0-0)  452-
+ u_alu/U92 (448)  NOR (nr02d0)
+     A1        I  (1-1-9 0-0-0-0)  89-u_alu/U10/ZN
+     A2        I  (2-2-8 0-0-0-0)  84-u_alu/U17/ZN
+     ZN        O  (1-3-7 0-0-0-0)  456-u_alu/U93/A
+ u_alu/U22 (449)  INV (inv0d0)
+     I         I  (2-2-5 0-0-0-0)  299-data_rd_tri_7_/ZN
+     ZN        O  (2-2-10 0-0-0-0)  455-u_alu/U93/C1
+ u_alu/U89 (450)  NOR (nr02d0)
+     A1        I  (3-1-8 0-0-0-0)  88-u_alu/U20/ZN
+     A2        I  (4-4-12 0-0-0-0)  436-u_alu/U88/Z
+     ZN        O  (1-7-10 0-0-0-0)  452-u_alu/U90/A
+ u_alu/U91 (451)  AND (aor22d1)
+     A1        I  (1-3-8 0-0-0-0)  86-u_alu/U43/ZN
+     A2        I  (4-4-12 0-0-0-0)  436-u_alu/U88/Z
+     ---       O  (1-7-9 0-0-0-0)  453-
+ u_alu/U90 (452)  OR (aor221d1)
+     ---       I  (1-2-10 0-0-0-0)  445-
+     ---       I  (1-3-10 0-0-0-0)  447-
+     A         I  (1-7-10 0-0-0-0)  450-u_alu/U89/ZN
+     Z         O  (3-2-8 0-0-0-0)  454-u_alu/U93/B2
+ u_alu/U91 (453)  OR (aor22d1)
+     ---       I  (1-4-9 0-0-0-0)  446-
+     ---       I  (1-7-9 0-0-0-0)  451-
+     Z         O  (2-4-8 0-0-0-0)  455-u_alu/U93/C2
+ u_alu/U93 (454)  AND (aor221d1)
+     B1        I  (2-2-5 0-0-0-0)  299-data_rd_tri_7_/ZN
+     B2        I  (3-2-8 0-0-0-0)  452-u_alu/U90/Z
+     ---       O  (2-4-6 0-0-0-0)  456-
+ u_alu/U93 (455)  AND (aor221d1)
+     C1        I  (2-2-10 0-0-0-0)  449-u_alu/U22/ZN
+     C2        I  (2-4-8 0-0-0-0)  453-u_alu/U91/Z
+     ---       O  (2-6-6 0-0-0-0)  456-
+ u_alu/U93 (456)  OR (aor221d1)
+     A         I  (1-3-7 0-0-0-0)  448-u_alu/U92/ZN
+     ---       I  (2-4-6 0-0-0-0)  454-
+     ---       I  (2-6-6 0-0-0-0)  455-
+     Z         O  (5-3-3 0-0-0-0)  457-u_alu/alu_out_reg_7_/D
+ u_alu/alu_out_reg_7_ (457)  MUX (sdnrq1)
+     SC        I  (1-1-3 0-0-0-0)  5-test_se
+     D         I  (5-3-3 0-0-0-0)  456-u_alu/U93/Z
+     SD        I  (1-1-0 0-0-0-0)  501-u_alu/alu_out_reg_6_/Q
+     ---       O  (2-2-2 0-0-0-0)  502-
+ u_clk_gen/state_current_reg_6_ (458)  DFF (sdcfq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+    !---       I  (1-1-3 0-0-0-0)  44-
+     ---       I  (2-2-1 0-0-0-0)  45-
+     Q         O  (1-1-0 0-0-0-0)  20-u_clk_gen/U20/I
+                                   51-u_clk_gen/U17/A2 ...
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=2  invert_data=IN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_clk_gen/state_current_reg_5_ (459)  DFF (sdcfq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+    !---       I  (1-1-3 0-0-0-0)  42-
+     ---       I  (2-2-1 0-0-0-0)  43-
+     Q         O  (1-1-0 0-0-0-0)  21-u_clk_gen/U28/I
+                                   37-u_clk_gen/U19/A1 ...
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=3  invert_data=NI  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_clk_gen/state_current_reg_1_ (460)  DFF (sdcfq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+    !---       I  (1-1-3 0-0-0-0)  46-
+     ---       I  (2-2-1 0-0-0-0)  47-
+     Q         O  (1-1-0 0-0-0-0)  50-u_clk_gen/state_current_reg_2_/SD
+                                   40-u_clk_gen/U10/A1 ...
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=7  invert_data=IN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_clk_gen/state_current_reg_2_ (461)  DFF (sdcfq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+    !---       I  (1-1-3 0-0-0-0)  49-
+     ---       I  (2-2-1 0-0-0-0)  50-
+     Q         O  (1-1-0 0-0-0-0)  23-u_clk_gen/U14/I
+                                   52-u_clk_gen/U21/A1 ...
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=6  invert_data=IN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_clk_gen/state_current_reg_3_ (462)  DFF (sdcfq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+    !---       I  (1-1-3 0-0-0-0)  55-
+     ---       I  (2-2-1 0-0-0-0)  56-
+     Q         O  (1-1-0 0-0-0-0)  24-u_clk_gen/U33/I
+                                   51-u_clk_gen/U17/A1 ...
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=5  invert_data=NI  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_clk_gen/state_current_reg_4_ (463)  DFF (sdcfq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+    !---       I  (1-1-3 0-0-0-0)  59-
+     ---       I  (2-2-1 0-0-0-0)  60-
+     Q         O  (1-1-0 0-0-0-0)  25-u_clk_gen/U18/I
+                                   38-u_clk_gen/U29/A1 ...
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=4  invert_data=IN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_clk_gen/state_current_reg_7_ (464)  DFF (sdcfq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+    !---       I  (1-1-3 0-0-0-0)  57-
+     ---       I  (2-2-1 0-0-0-0)  58-
+     Q         O  (1-1-0 0-0-0-0)  27-u_clk_gen/U15/I
+                                   26-u_clk_gen/U6/A2
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=1  invert_data=NI  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_clk_gen/fetch_reg (465)  DFF (sdcfq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+    !---       I  (1-1-3 0-0-0-0)  68-
+     ---       I  (2-2-1 0-0-0-0)  71-
+     Q         O  (1-1-0 0-0-0-0)  98-u_addr/U7/S
+                                   99-u_addr/U8/S ...
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=9  invert_data=IN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_clk_gen/alu_clk_i_reg (466)  DFF (sdcfq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+    !---       I  (1-1-3 0-0-0-0)  62-
+     ---       I  (2-2-1 0-0-0-0)  64-
+     Q         O  (1-1-0 0-0-0-0)  33-u_clk_gen/clk2_i_reg/SD
+                                   63-u_clk_gen/U13/S ...
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=11  invert_data=NI  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_clk_gen/clk2_i_reg (467)  DFF (sdcfq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+    !---       I  (1-1-3 0-0-0-0)  32-
+     ---       I  (2-2-1 0-0-0-0)  33-
+     Q         O  (1-1-0 0-0-0-0)  545-clk2
+                                   31-u_clk_gen/U27/I
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=10  invert_data=NI  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_clk_gen/state_current_reg_0_ (468)  DFF (sdpfb1)
+    !SDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+     ---       I  ()  (TIE_0)
+    !---       I  (1-1-3 0-0-0-0)  65-
+     ---       I  (2-2-1 0-0-0-0)  67-
+     ---       O  (1-1-0 0-0-0-0)  35-
+                                   34-
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=8  invert_data=NI  obs=noproc
+ set_reset_usage: set=yes, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_clk_gen/clk4_i_reg (469)  DFF (sdpfb1)
+    !SDN       I  (1-1-1 0-0-0-0)  14-u_clk_gen/U26/ZN
+     ---       I  ()  (TIE_0)
+    !---       I  (1-1-3 0-0-0-0)  73-
+     ---       I  (2-2-1 0-0-0-0)  77-
+     ---       O  (1-1-0 0-0-0-0)  72-
+                                   75-
+ scan_behavior: MASTER(TE/-)  chain=1  cell_id=0  invert_data=IN  obs=noproc
+ set_reset_usage: set=yes, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/state_reg (470)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  186-
+     Q         O  (1-1-0 0-0-0-0)  181-u_machine/data_ctl_ena_reg/SD
+                                   184-u_instruction_reg/U20/A1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=13  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_15_ (471)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  339-
+     Q         O  (1-1-0 0-0-0-0)  186-u_instruction_reg/state_reg/SD
+                                   338-u_instruction_reg/U27/I0 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=14  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_7_ (472)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  341-
+     Q         O  (1-1-0 0-0-0-0)  105-u_addr/U12/I0
+                                   309-u_instruction_reg/opc_iraddr_reg_8_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=22  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_8_ (473)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  309-
+     Q         O  (1-1-0 0-0-0-0)  104-u_addr/U6/I0
+                                   315-u_instruction_reg/opc_iraddr_reg_9_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=21  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_0_ (474)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  311-
+     Q         O  (1-1-0 0-0-0-0)  116-u_addr/U4/I0
+                                   317-u_instruction_reg/opc_iraddr_reg_1_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=29  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_9_ (475)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  315-
+     Q         O  (1-1-0 0-0-0-0)  102-u_addr/U10/I0
+                                   319-u_instruction_reg/opc_iraddr_reg_10_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=20  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_1_ (476)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  317-
+     Q         O  (1-1-0 0-0-0-0)  114-u_addr/U5/I0
+                                   321-u_instruction_reg/opc_iraddr_reg_2_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=28  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_14_ (477)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  335-
+     Q         O  (1-1-0 0-0-0-0)  339-u_instruction_reg/opc_iraddr_reg_15_/SD
+                                   334-u_instruction_reg/U32/I0 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=15  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_12_ (478)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  327-
+     Q         O  (1-1-0 0-0-0-0)  98-u_addr/U7/I0
+                                   333-u_instruction_reg/opc_iraddr_reg_13_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=17  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_11_ (479)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  323-
+     Q         O  (1-1-0 0-0-0-0)  99-u_addr/U8/I0
+                                   327-u_instruction_reg/opc_iraddr_reg_12_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=18  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_10_ (480)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  319-
+     Q         O  (1-1-0 0-0-0-0)  101-u_addr/U13/I0
+                                   323-u_instruction_reg/opc_iraddr_reg_11_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=19  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_13_ (481)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  333-
+     Q         O  (1-1-0 0-0-0-0)  335-u_instruction_reg/opc_iraddr_reg_14_/SD
+                                   161-u_machine/U41/A1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=16  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_6_ (482)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  337-
+     Q         O  (1-1-0 0-0-0-0)  107-u_addr/U11/I0
+                                   341-u_instruction_reg/opc_iraddr_reg_7_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=23  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_5_ (483)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  331-
+     Q         O  (1-1-0 0-0-0-0)  108-u_addr/U2/I0
+                                   337-u_instruction_reg/opc_iraddr_reg_6_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=24  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_4_ (484)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  329-
+     Q         O  (1-1-0 0-0-0-0)  110-u_addr/U1/I0
+                                   331-u_instruction_reg/opc_iraddr_reg_5_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=25  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_3_ (485)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  325-
+     Q         O  (1-1-0 0-0-0-0)  111-u_addr/U3/I0
+                                   329-u_instruction_reg/opc_iraddr_reg_4_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=26  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_instruction_reg/opc_iraddr_reg_2_ (486)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  15-u_instruction_reg/U26/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  321-
+     Q         O  (1-1-0 0-0-0-0)  113-u_addr/U9/I0
+                                   325-u_instruction_reg/opc_iraddr_reg_3_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=27  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_accumulator/accum_reg_7_ (487)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  16-u_accumulator/U19/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  146-
+     Q         O  (1-1-0 0-0-0-0)  363-u_alu/alu_out_reg_0_/SD
+                                   145-u_accumulator/U18/I1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=51  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_accumulator/accum_reg_6_ (488)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  16-u_accumulator/U19/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  144-
+     Q         O  (1-1-0 0-0-0-0)  146-u_accumulator/accum_reg_7_/SD
+                                   143-u_accumulator/U16/I1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=52  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_accumulator/accum_reg_5_ (489)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  16-u_accumulator/U19/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  142-
+     Q         O  (1-1-0 0-0-0-0)  144-u_accumulator/accum_reg_6_/SD
+                                   141-u_accumulator/U14/I1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=53  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_accumulator/accum_reg_4_ (490)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  16-u_accumulator/U19/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  140-
+     Q         O  (1-1-0 0-0-0-0)  142-u_accumulator/accum_reg_5_/SD
+                                   139-u_accumulator/U12/I1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=54  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_accumulator/accum_reg_3_ (491)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  16-u_accumulator/U19/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  138-
+     Q         O  (1-1-0 0-0-0-0)  140-u_accumulator/accum_reg_4_/SD
+                                   137-u_accumulator/U10/I1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=55  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_accumulator/accum_reg_2_ (492)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  16-u_accumulator/U19/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  136-
+     Q         O  (1-1-0 0-0-0-0)  138-u_accumulator/accum_reg_3_/SD
+                                   135-u_accumulator/U8/I1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=56  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_accumulator/accum_reg_1_ (493)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  16-u_accumulator/U19/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  134-
+     Q         O  (1-1-0 0-0-0-0)  136-u_accumulator/accum_reg_2_/SD
+                                   133-u_accumulator/U6/I1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=57  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_accumulator/accum_reg_0_ (494)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  16-u_accumulator/U19/ZN
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  132-
+     Q         O  (1-1-0 0-0-0-0)  134-u_accumulator/accum_reg_1_/SD
+                                   131-u_accumulator/U4/I1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=58  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_alu/alu_out_reg_0_ (495)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  30-u_clk_gen/U59/Z
+     ---       I  (2-2-2 0-0-0-0)  363-
+     Q         O  (1-1-0 0-0-0-0)  371-u_alu/alu_out_reg_1_/SD
+                                   256-u_data_ctl/U9/I ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=50  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_alu/alu_out_reg_2_ (496)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  30-u_clk_gen/U59/Z
+     ---       I  (2-2-2 0-0-0-0)  386-
+     Q         O  (1-1-0 0-0-0-0)  401-u_alu/alu_out_reg_3_/SD
+                                   262-u_data_ctl/U8/I ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=48  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_alu/alu_out_reg_1_ (497)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  30-u_clk_gen/U59/Z
+     ---       I  (2-2-2 0-0-0-0)  371-
+     Q         O  (1-1-0 0-0-0-0)  386-u_alu/alu_out_reg_2_/SD
+                                   259-u_data_ctl/U6/I ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=49  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_alu/alu_out_reg_3_ (498)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  30-u_clk_gen/U59/Z
+     ---       I  (2-2-2 0-0-0-0)  401-
+     Q         O  (1-1-0 0-0-0-0)  416-u_alu/alu_out_reg_4_/SD
+                                   265-u_data_ctl/U5/I ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=47  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_alu/alu_out_reg_4_ (499)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  30-u_clk_gen/U59/Z
+     ---       I  (2-2-2 0-0-0-0)  416-
+     Q         O  (1-1-0 0-0-0-0)  431-u_alu/alu_out_reg_5_/SD
+                                   268-u_data_ctl/U2/I ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=46  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_alu/alu_out_reg_5_ (500)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  30-u_clk_gen/U59/Z
+     ---       I  (2-2-2 0-0-0-0)  431-
+     Q         O  (1-1-0 0-0-0-0)  444-u_alu/alu_out_reg_6_/SD
+                                   271-u_data_ctl/U3/I ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=45  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_alu/alu_out_reg_6_ (501)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  30-u_clk_gen/U59/Z
+     ---       I  (2-2-2 0-0-0-0)  444-
+     Q         O  (1-1-0 0-0-0-0)  457-u_alu/alu_out_reg_7_/SD
+                                   274-u_data_ctl/U4/I ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=44  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_alu/alu_out_reg_7_ (502)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  30-u_clk_gen/U59/Z
+     ---       I  (2-2-2 0-0-0-0)  457-
+     Q         O  (1-1-0 0-0-0-0)  205-u_counter/pc_addr_reg_0_/SD
+                                   145-u_accumulator/U18/I0 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=43  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_12_ (503)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  224-
+     Q         O  (1-1-0 0-0-0-0)  98-u_addr/U7/I1
+                                   311-u_instruction_reg/opc_iraddr_reg_0_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=30  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_11_ (504)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  216-
+     Q         O  (1-1-0 0-0-0-0)  99-u_addr/U8/I1
+                                   224-u_counter/pc_addr_reg_12_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=31  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_10_ (505)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  245-
+     Q         O  (1-1-0 0-0-0-0)  101-u_addr/U13/I1
+                                   216-u_counter/pc_addr_reg_11_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=32  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_9_ (506)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  220-
+     Q         O  (1-1-0 0-0-0-0)  102-u_addr/U10/I1
+                                   245-u_counter/pc_addr_reg_10_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=33  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_8_ (507)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  242-
+     Q         O  (1-1-0 0-0-0-0)  104-u_addr/U6/I1
+                                   220-u_counter/pc_addr_reg_9_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=34  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_7_ (508)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  231-
+     Q         O  (1-1-0 0-0-0-0)  105-u_addr/U12/I1
+                                   242-u_counter/pc_addr_reg_8_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=35  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_6_ (509)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  248-
+     Q         O  (1-1-0 0-0-0-0)  107-u_addr/U11/I1
+                                   231-u_counter/pc_addr_reg_7_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=36  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_5_ (510)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  235-
+     Q         O  (1-1-0 0-0-0-0)  108-u_addr/U2/I1
+                                   248-u_counter/pc_addr_reg_6_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=37  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_4_ (511)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  227-
+     Q         O  (1-1-0 0-0-0-0)  110-u_addr/U1/I1
+                                   235-u_counter/pc_addr_reg_5_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=38  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_3_ (512)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  239-
+     Q         O  (1-1-0 0-0-0-0)  111-u_addr/U3/I1
+                                   227-u_counter/pc_addr_reg_4_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=39  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_2_ (513)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  212-
+     Q         O  (1-1-0 0-0-0-0)  113-u_addr/U9/I1
+                                   239-u_counter/pc_addr_reg_3_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=40  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_1_ (514)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  209-
+     Q         O  (1-1-0 0-0-0-0)  114-u_addr/U5/I1
+                                   212-u_counter/pc_addr_reg_2_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=41  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_counter/pc_addr_reg_0_ (515)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  17-u_counter/U46/ZN
+     CP        I  (2-2-3 0-0-0-0)  187-u_machine/U48/Z
+     ---       I  (2-2-2 0-0-0-0)  205-
+     Q         O  (1-1-0 0-0-0-0)  116-u_addr/U4/I1
+                                   209-u_counter/pc_addr_reg_1_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=42  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/ena_reg (516)  DFF (sdcrq1)
+     ---       I  ()  (TIE_0)
+    !CDN       I  (1-1-1 0-0-0-0)  249-u_machine/U34/ZN
+     CP        I  (2-2-2 0-0-0-0)  250-U21/Z
+     ---       I  (2-1-2 0-0-0-0)  251-
+     Q         O  (1-1-0 0-0-0-0)  175-u_machine/halt_reg/SD
+                                   151-u_machine/U10/A1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=11  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=yes, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/state_reg_0_ (517)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  280-
+     Q         O  (1-1-0 0-0-0-0)  152-u_machine/state_reg_1_/SD
+                                   128-u_machine/U27/A1 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=4  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/state_reg_3_ (518)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  163-
+     Q         O  (1-1-0 0-0-0-0)  164-u_machine/wr_reg/SD
+                                   128-u_machine/U27/A2 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=1  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/load_acc_reg (519)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  188-
+     Q         O  (1-1-0 0-0-0-0)  177-u_machine/load_ir_reg/SD
+                                   130-u_accumulator/U3/I
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=8  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/state_reg_1_ (520)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  152-
+     Q         O  (1-1-0 0-0-0-0)  169-u_machine/state_reg_2_/SD
+                                   153-u_machine/U28/A3 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=3  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/state_reg_2_ (521)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  169-
+     Q         O  (1-1-0 0-0-0-0)  163-u_machine/state_reg_3_/SD
+                                   159-u_machine/U43/B2 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=2  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/load_ir_reg (522)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  177-
+     Q         O  (1-1-0 0-0-0-0)  183-u_machine/load_pc_reg/SD
+                                   184-u_instruction_reg/U20/A2 ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=7  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/wr_reg (523)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  164-
+     Q         O  (1-1-0 0-0-0-0)  531-wr
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=0  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/inc_pc_reg (524)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  198-
+     Q         O  (1-1-0 0-0-0-0)  188-u_machine/load_acc_reg/SD
+                                   187-u_machine/U48/I0
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=9  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/halt_reg (525)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  175-
+     Q         O  (1-1-0 0-0-0-0)  529-halt
+                                   198-u_machine/inc_pc_reg/SD
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=10  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/load_pc_reg (526)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  183-
+     Q         O  (1-1-0 0-0-0-0)  202-u_machine/rd_reg/SD
+                                   204-u_counter/U4/S ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=6  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/data_ctl_ena_reg (527)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  181-
+     Q         O  (1-1-0 0-0-0-0)  251-u_machine/ena_reg/SD
+                                   253-u_data_ctl/U10/A2
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=12  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ u_machine/rd_reg (528)  DFF (sdnrq1)
+     ---       I  ()  (TIE_0)
+     ---       I  ()  (TIE_0)
+     CP        I  (2-2-3 0-0-0-0)  19-u_clk_gen/U58/Z
+     ---       I  (2-2-2 0-0-0-0)  202-
+     Q         O  (1-1-0 0-0-0-0)  530-rd
+                                   280-u_machine/state_reg_0_/SD ...
+ scan_behavior: MASTER(LE/-)  chain=2  cell_id=5  invert_data=NN  obs=noproc
+ set_reset_usage: set=no, reset=no, unstable_flag=no, set_dominance=none, reset_dominance=none
+ halt (529)  PO (_PO)
+     ---       I  (1-1-0 0-0-0-0)  525-u_machine/halt_reg/Q
+     halt      O  (1-1-0 0-0-0-0)
+ rd (530)  PO (_PO)
+     ---       I  (1-1-0 0-0-0-0)  528-u_machine/rd_reg/Q
+     rd        O  (1-1-0 0-0-0-0)
+ wr (531)  PO (_PO)
+     ---       I  (1-1-0 0-0-0-0)  523-u_machine/wr_reg/Q
+     wr        O  (1-1-0 0-0-0-0)
+ PO usage:  scanout(2)
+ addr[12] (532)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  98-u_addr/U7/Z
+     addr[12]    O  (2-2-0 0-0-0-0)
+ addr[11] (533)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  99-u_addr/U8/Z
+     addr[11]    O  (2-2-0 0-0-0-0)
+ addr[10] (534)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  101-u_addr/U13/Z
+     addr[10]    O  (2-2-0 0-0-0-0)
+ addr[9] (535)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  102-u_addr/U10/Z
+     addr[9]    O  (2-2-0 0-0-0-0)
+ addr[8] (536)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  104-u_addr/U6/Z
+     addr[8]    O  (2-2-0 0-0-0-0)
+ addr[7] (537)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  105-u_addr/U12/Z
+     addr[7]    O  (2-2-0 0-0-0-0)
+ addr[6] (538)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  107-u_addr/U11/Z
+     addr[6]    O  (2-2-0 0-0-0-0)
+ addr[5] (539)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  108-u_addr/U2/Z
+     addr[5]    O  (2-2-0 0-0-0-0)
+ addr[4] (540)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  110-u_addr/U1/Z
+     addr[4]    O  (2-2-0 0-0-0-0)
+ addr[3] (541)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  111-u_addr/U3/Z
+     addr[3]    O  (2-2-0 0-0-0-0)
+ addr[2] (542)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  113-u_addr/U9/Z
+     addr[2]    O  (2-2-0 0-0-0-0)
+ addr[1] (543)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  114-u_addr/U5/Z
+     addr[1]    O  (2-2-0 0-0-0-0)
+ addr[0] (544)  PO (_PO)
+     ---       I  (2-2-0 0-0-0-0)  116-u_addr/U4/Z
+     addr[0]    O  (2-2-0 0-0-0-0)
+ clk2 (545)  PO (_PO)
+     ---       I  (1-1-0 0-0-0-0)  467-u_clk_gen/clk2_i_reg/Q
+     clk2      O  (1-1-0 0-0-0-0)
+ clk4 (546)  PO (_PO)
+     ---       I  (1-1-0 0-0-0-0)  72-u_clk_gen/clk4_i_reg/Q
+     clk4      O  (1-1-0 0-0-0-0)
+ PO usage:  scanout(1)
